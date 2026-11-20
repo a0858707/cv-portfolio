@@ -85,13 +85,13 @@
       <!-- Action Buttons -->
       <div class="flex items-center gap-3">
         <a href="https://calendar.app.google/UeqAokAbZ4mWwfvA9" target="_blank" rel="noopener noreferrer" 
-           class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-semibold text-xs hover:shadow-[0_0_20px_rgba(0,242,254,0.35)] transition-all transform hover:-translate-y-0.5">
-          <i data-lucide="calendar" class="w-4 h-4"></i>
-          <span>Book Call</span>
+           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 text-slate-950 font-black text-xs sm:text-sm hover:shadow-[0_0_25px_rgba(0,242,254,0.55)] transition-all transform hover:-translate-y-0.5 border border-cyan-300/40">
+          <i data-lucide="calendar" class="w-4 h-4 text-slate-950"></i>
+          <span>Book Call 📅</span>
         </a>
 
         <a href="https://t.me/alexander4089" target="_blank" rel="noopener noreferrer" 
-           class="p-2 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-cyan-400 border border-white/10 transition" title="Telegram: @alexander4089">
+           class="p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-cyan-400 border border-white/10 transition" title="Telegram: @alexander4089">
           <i data-lucide="send" class="w-4 h-4"></i>
         </a>
       </div>
@@ -143,30 +143,46 @@
           </div>
 
           <!-- CTAs -->
-          <div class="flex flex-wrap items-center gap-4 pt-4">
-            <a href="https://calendar.app.google/UeqAokAbZ4mWwfvA9" target="_blank" rel="noopener noreferrer"
-               class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 text-slate-950 font-bold text-sm shadow-[0_0_25px_rgba(0,242,254,0.3)] hover:shadow-[0_0_35px_rgba(0,242,254,0.5)] transition transform hover:-translate-y-0.5 flex items-center gap-2.5">
-              <i data-lucide="calendar" class="w-4 h-4"></i>
-              <span>Schedule Discovery Call</span>
-            </a>
+          <div class="space-y-4 pt-4">
+            <!-- Primary Massive Booking CTA -->
+            <div>
+              <a href="https://calendar.app.google/UeqAokAbZ4mWwfvA9" target="_blank" rel="noopener noreferrer"
+                 class="group inline-flex items-center gap-4 px-7 py-4 sm:px-8 sm:py-4.5 rounded-2xl bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 text-slate-950 font-black shadow-[0_0_35px_rgba(0,242,254,0.45)] hover:shadow-[0_0_60px_rgba(0,242,254,0.7)] transition-all transform hover:-translate-y-1 hover:scale-[1.02] border border-cyan-300/40">
+                <div class="w-12 h-12 rounded-xl bg-slate-950/15 flex items-center justify-center shrink-0 border border-slate-950/20 group-hover:rotate-6 transition-transform">
+                  <i data-lucide="calendar" class="w-7 h-7 text-slate-950"></i>
+                </div>
+                <div class="text-left">
+                  <div class="text-[11px] font-mono uppercase tracking-wider text-slate-900 font-bold flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-slate-950 animate-ping"></span>
+                    <span>Free 30-Min Strategy Call</span>
+                  </div>
+                  <div class="text-base sm:text-xl font-black tracking-tight leading-tight">
+                    Schedule on Google Calendar →
+                  </div>
+                </div>
+              </a>
+            </div>
 
-            <a href="/Alexander_Bogolepov_CV.pdf" download="Alex_Bogolepov_CV.pdf"
-               class="px-5 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold text-sm border border-white/10 hover:border-cyan-500/40 transition flex items-center gap-2">
-              <i data-lucide="download" class="w-4 h-4 text-cyan-400"></i>
-              <span>Download CV (PDF)</span>
-            </a>
+            <!-- Secondary Actions Row -->
+            <div class="flex flex-wrap items-center gap-3">
+              <a href="/Alexander_Bogolepov_CV.pdf" download="Alex_Bogolepov_CV.pdf"
+                 class="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold text-xs sm:text-sm border border-white/10 hover:border-cyan-500/40 transition flex items-center gap-2">
+                <i data-lucide="download" class="w-4 h-4 text-cyan-400"></i>
+                <span>Download CV (PDF)</span>
+              </a>
 
-            <a href="https://www.linkedin.com/in/bogolepovauto/" target="_blank" rel="noopener noreferrer"
-               class="px-4 py-3.5 rounded-xl bg-slate-900/70 hover:bg-slate-800 text-slate-300 hover:text-white border border-white/10 transition flex items-center gap-2">
-              <i data-lucide="linkedin" class="w-4 h-4 text-blue-400"></i>
-              <span>LinkedIn</span>
-            </a>
+              <a href="https://www.linkedin.com/in/bogolepovauto/" target="_blank" rel="noopener noreferrer"
+                 class="px-4 py-3 rounded-xl bg-slate-900/70 hover:bg-slate-800 text-slate-300 hover:text-white border border-white/10 transition flex items-center gap-2 text-xs sm:text-sm">
+                <i data-lucide="linkedin" class="w-4 h-4 text-blue-400"></i>
+                <span>LinkedIn</span>
+              </a>
 
-            <a href="https://t.me/alexander4089" target="_blank" rel="noopener noreferrer"
-               class="px-4 py-3.5 rounded-xl bg-slate-900/70 hover:bg-slate-800 text-cyan-400 hover:text-cyan-300 border border-cyan-500/30 transition flex items-center gap-2">
-              <i data-lucide="send" class="w-4 h-4"></i>
-              <span>@alexander4089</span>
-            </a>
+              <a href="https://t.me/alexander4089" target="_blank" rel="noopener noreferrer"
+                 class="px-4 py-3 rounded-xl bg-slate-900/70 hover:bg-slate-800 text-cyan-400 hover:text-cyan-300 border border-cyan-500/30 transition flex items-center gap-2 text-xs sm:text-sm">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span>@alexander4089</span>
+              </a>
+            </div>
           </div>
 
         </div>
@@ -1190,26 +1206,45 @@
         </p>
       </div>
 
-      <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+      <!-- Prominent Booking Block -->
+      <div class="max-w-xl mx-auto p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-cyan-950/60 to-slate-900/90 border border-cyan-400/40 shadow-[0_0_50px_rgba(0,242,254,0.25)] space-y-4">
         
-        <a href="https://calendar.app.google/UeqAokAbZ4mWwfvA9" target="_blank" rel="noopener noreferrer"
-           class="px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 text-slate-950 font-bold text-sm shadow-[0_0_30px_rgba(0,242,254,0.35)] hover:shadow-[0_0_45px_rgba(0,242,254,0.55)] transition transform hover:-translate-y-0.5 flex items-center gap-2">
-          <i data-lucide="calendar" class="w-5 h-5"></i>
-          <span>Book a 30-Min Strategy Call</span>
-        </a>
+        <div class="flex items-center justify-center gap-2 text-xs font-mono text-cyan-400 uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Google Calendar • Open for Bookings</span>
+        </div>
 
+        <div>
+          <a href="https://calendar.app.google/UeqAokAbZ4mWwfvA9" target="_blank" rel="noopener noreferrer"
+             class="group inline-flex items-center justify-center gap-4 px-8 py-5 sm:px-12 sm:py-6 rounded-2xl bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 text-slate-950 font-black shadow-[0_0_35px_rgba(0,242,254,0.45)] hover:shadow-[0_0_60px_rgba(0,242,254,0.75)] transition-all transform hover:-translate-y-1 hover:scale-105 border border-white/40">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-slate-950/15 flex items-center justify-center shrink-0 border border-slate-950/20 group-hover:rotate-6 transition-transform">
+              <i data-lucide="calendar" class="w-7 h-7 sm:w-8 sm:h-8 text-slate-950"></i>
+            </div>
+            <div class="text-left">
+              <div class="text-xs font-mono uppercase tracking-wider text-slate-900 font-bold">30-Min Strategy Call</div>
+              <div class="text-lg sm:text-2xl font-black tracking-tight leading-tight">Book on Google Calendar →</div>
+            </div>
+          </a>
+        </div>
+
+        <p class="text-xs text-slate-400 font-mono">
+          Direct slot confirmation • Instant Google Meet link • Zero commitment
+        </p>
+      </div>
+
+      <!-- Secondary Contact Options -->
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
         <a href="https://t.me/alexander4089" target="_blank" rel="noopener noreferrer"
-           class="px-6 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-cyan-400 font-semibold text-sm border border-cyan-500/30 transition flex items-center gap-2">
-          <i data-lucide="send" class="w-5 h-5"></i>
-          <span>Message @alexander4089 on Telegram</span>
+           class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-cyan-400 font-semibold text-sm border border-cyan-500/30 transition flex items-center gap-2">
+          <i data-lucide="send" class="w-4 h-4"></i>
+          <span>Telegram: @alexander4089</span>
         </a>
 
         <a href="mailto:a0858707@gmail.com"
-           class="px-6 py-4 rounded-xl bg-slate-900/60 hover:bg-slate-800 text-slate-200 font-semibold text-sm border border-white/10 transition flex items-center gap-2">
-          <i data-lucide="mail" class="w-5 h-5 text-slate-400"></i>
+           class="px-6 py-3.5 rounded-xl bg-slate-900/60 hover:bg-slate-800 text-slate-200 font-semibold text-sm border border-white/10 transition flex items-center gap-2">
+          <i data-lucide="mail" class="w-4 h-4 text-slate-400"></i>
           <span>a0858707@gmail.com</span>
         </a>
-
       </div>
 
       <div class="pt-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-6 text-xs font-mono text-slate-400">
@@ -1266,6 +1301,22 @@
       </div>
     </div>
   </footer>
+
+    <!-- Floating Quick Booking Widget -->
+  <aside class="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40">
+    <a href="https://calendar.app.google/UeqAokAbZ4mWwfvA9" target="_blank" rel="noopener noreferrer"
+       class="group flex items-center gap-3 px-5 py-3.5 sm:px-6 sm:py-4 rounded-2xl bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 text-slate-950 font-black text-sm shadow-[0_0_35px_rgba(0,242,254,0.5)] hover:shadow-[0_0_50px_rgba(0,242,254,0.75)] transition-all transform hover:-translate-y-1 hover:scale-105 border border-white/40 backdrop-blur">
+      <span class="relative flex h-3 w-3">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-950 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-3 w-3 bg-slate-950"></span>
+      </span>
+      <i data-lucide="calendar" class="w-5 h-5 sm:w-6 sm:h-6 text-slate-950"></i>
+      <div class="text-left">
+        <div class="leading-none text-[10px] font-mono uppercase tracking-wider text-slate-900 font-bold">Google Calendar</div>
+        <div class="leading-tight text-sm sm:text-base font-black">Book 30-Min Call →</div>
+      </div>
+    </a>
+  </aside>
 
   <script src="/app.js"></script>
 </body>
