@@ -250,7 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     'queue': {
       title: 'Custom Rate Limiter & Webhook Gateway (RabbitMQ Replaced)',
-      desc: 'Under massive advertising spikes (20,000+ concurrent leads), standard RabbitMQ message brokers failed to handle asymmetric downstream rate limits (amoCRM strict 7 req/s vs WhatsApp 40 req/s vs Accounting APIs), causing queue backpressure stalls. Alexander built a dedicated Custom Rate Limiter Gateway that receives webhooks from n8n, buffers them in Redis token buckets, prioritizes hot sales leads, and smoothly distributes traffic to downstream services with zero drops.',
+      desc: 'Under massive advertising spikes (20,000+ concurrent leads), standard RabbitMQ message brokers failed to handle asymmetric downstream rate limits (CRM strict 7 req/s vs WhatsApp 40 req/s vs Accounting APIs), causing queue backpressure stalls. Alexander built a dedicated Custom Rate Limiter Gateway that receives webhooks from n8n, buffers them in Redis token buckets, prioritizes hot sales leads, and smoothly distributes traffic to downstream services with zero drops.',
       tech: 'Custom Dispatcher Microservice, Redis Token Bucket & Sorted Sets, Dynamic Jitter Backoff, RabbitMQ Replacement',
       resilience: 'Isolated multi-tenant destination queues, zero HTTP 429 CRM lockouts, automated dead-letter retry.'
     },
@@ -261,15 +261,15 @@ document.addEventListener('DOMContentLoaded', () => {
       resilience: 'Idempotency checks, automated retry policies, database connection pooling, webhook error triggers.'
     },
     'crm_cdp': {
-      title: 'amoCRM / Kommo + Custom Widgets & Scalable CDP',
-      desc: 'Master customer record layer featuring custom embedded amoCRM UI widgets (1-click invoicing, payment status from 1C/Xero, contract generator). When CRM mailing limits are capped, audience segments and drip sequences scale via dedicated CDP pipelines.',
-      tech: 'amoCRM API v4, Custom JS Widgets, 1C:Enterprise / Xero Bridge, Kommo Pipelines, Standalone CDP Platform',
+      title: 'Enterprise CRM + Custom Widgets & Scalable CDP',
+      desc: 'Master customer record layer featuring custom embedded CRM UI widgets (1-click invoicing, payment status from 1C/Xero, contract generator). When CRM mailing limits are capped, audience segments and drip sequences scale via dedicated CDP pipelines.',
+      tech: 'Enterprise CRM API v4, Custom JS Widgets, 1C:Enterprise / Xero Bridge, Kommo Architecture, Standalone CDP Platform',
       resilience: 'Rate-limited request queuing (7 req/sec throttle), bidirectional entity synchronization, contact deduplication.'
     },
     'widgets_accounting': {
       title: 'Custom CRM UI Widgets & Accounting Bridges (1C / Xero)',
-      desc: 'Embedded interactive interfaces inside amoCRM deal cards allowing sales reps to generate invoices, verify bank payment settlements from 1C and Xero, and track document signing without leaving the CRM. All closed transactions automatically trigger accounting ledger entries and tax document creation.',
-      tech: 'amoCRM JS SDK, REST API, 1C:Enterprise (UNF/BP/ZUP), Diadoc, Xero API, Webhook Callbacks',
+      desc: 'Embedded interactive interfaces inside CRM deal cards allowing sales reps to generate invoices, verify bank payment settlements from 1C and Xero, and track document signing without leaving the CRM. All closed transactions automatically trigger accounting ledger entries and tax document creation.',
+      tech: 'CRM JS SDK, REST API v4, 1C:Enterprise (UNF/BP/ZUP), Diadoc, Xero API, Webhook Callbacks',
       resilience: 'Asynchronous bank reconciliation, signature validation, zero manual data entry delay.'
     },
     'ai_monitor': {

@@ -39,7 +39,7 @@ app.post('/api/simulate-agent', (req, res) => {
       title: 'WhatsApp Business API (429 Too Many Requests)',
       workflow: 'Marketing Broadcast Pipeline #042',
       error: 'HTTP 429: Rate limit exceeded. 120 req/sec quota reached during flash-sale launch.',
-      rootCause: 'Sudden influx of 14,000 amoCRM lead webhooks exceeded provider burst tier.',
+      rootCause: 'Sudden influx of 14,000 CRM lead webhooks exceeded provider burst tier.',
       aiDiagnosis: 'Transient concurrency spike. No schema mismatch or fatal auth failure detected.',
       actionTaken: [
         'AI Agent automatically paused downstream worker node',
@@ -70,10 +70,10 @@ app.post('/api/simulate-agent', (req, res) => {
       latency: '310ms'
     },
     'schema_drift': {
-      title: 'amoCRM Webhook Payload Schema Drift',
+      title: 'CRM Webhook Payload Schema Drift',
       workflow: 'Lead-to-Deal Routing & Enrichment #017',
       error: 'TypeError: Cannot read property "custom_fields_values" of undefined in Code Node #3.',
-      rootCause: 'Sales Ops renamed custom field "UTM Campaign ID" to "Campaign ID v2" in amoCRM settings.',
+      rootCause: 'Sales Ops renamed custom field "UTM Campaign ID" to "Campaign ID v2" in CRM settings.',
       aiDiagnosis: 'Schema divergence detected. Downstream JavaScript node expects legacy key structure.',
       actionTaken: [
         'AI Agent inspected JSON payload diff against last 1,000 valid executions',
@@ -89,13 +89,13 @@ app.post('/api/simulate-agent', (req, res) => {
     'rate_limiter_overflow': {
       title: 'Custom Rate Limiter Gateway: RabbitMQ Outgrown & Replaced',
       workflow: 'High-Concurrency Webhook Dispatcher #001',
-      error: 'RabbitMQ Backpressure Bottleneck: Unable to handle asymmetric rate limits (amoCRM 7 req/s vs WABA 40 req/s).',
+      error: 'RabbitMQ Backpressure Bottleneck: Unable to handle asymmetric rate limits (CRM 7 req/s vs WABA 40 req/s).',
       rootCause: 'Standard broker queues suffered head-of-line blocking during a 22,000 lead marketing launch.',
       aiDiagnosis: 'Asymmetric downstream consumer saturation. RabbitMQ lacked per-destination token bucket precision.',
       actionTaken: [
         'Custom Rate Limiter Gateway intercepted webhook stream directly from n8n',
         'Separated payloads into isolated dynamic sliding-window queues per destination',
-        'Strictly paced amoCRM API v4 to 6.8 req/s while accelerating WhatsApp WABA to 40 req/s',
+        'Strictly paced CRM API v4 to 6.8 req/s while accelerating WhatsApp WABA to 40 req/s',
         'Successfully dispatched 22,000 webhooks with 0 dropped events and 0 HTTP 429 lockouts'
       ],
       leadsAffected: 22000,
