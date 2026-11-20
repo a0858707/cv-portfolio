@@ -38,8 +38,8 @@ app.post('/api/simulate-agent', (req, res) => {
 
   const scenarios = {
     'rate_limit': {
-      title: 'WhatsApp Business API (429 Too Many Requests)',
-      workflow: 'Marketing Broadcast Pipeline #042',
+      title: 'WAPI / WhatsApp Business API (429 Too Many Requests)',
+      workflow: 'Marketing Broadcast & WAPI Pipeline #042',
       error: 'HTTP 429: Rate limit exceeded. 120 req/sec quota reached during flash-sale launch.',
       rootCause: 'Sudden influx of 14,000 CRM lead webhooks exceeded provider burst tier.',
       aiDiagnosis: 'Transient concurrency spike. No schema mismatch or fatal auth failure detected.',
@@ -55,7 +55,7 @@ app.post('/api/simulate-agent', (req, res) => {
       latency: '240ms'
     },
     'token_expired': {
-      title: 'Meta Conversions API OAuth Token Revocation',
+      title: 'Meta Conversions API (CAPI) OAuth Token Revocation',
       workflow: 'Attribution & CAPI Sync Worker #108',
       error: 'OAuthException: Error validating access token: Session has expired on 2026-11-20.',
       rootCause: 'Long-lived System User token expired after 60-day security rotation policy.',
@@ -72,7 +72,7 @@ app.post('/api/simulate-agent', (req, res) => {
       latency: '310ms'
     },
     'schema_drift': {
-      title: 'CRM Webhook Payload Schema Drift',
+      title: 'MAPI & CRM Webhook Payload Schema Drift',
       workflow: 'Lead-to-Deal Routing & Enrichment #017',
       error: 'TypeError: Cannot read property "custom_fields_values" of undefined in Code Node #3.',
       rootCause: 'Sales Ops renamed custom field "UTM Campaign ID" to "Campaign ID v2" in CRM settings.',

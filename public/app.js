@@ -303,10 +303,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const nodeSpecs = {
     'traffic': {
-      title: 'Global Traffic & Ad Click Ingestion',
-      desc: 'Captures paid and organic clicks from Meta, Google Ads, TikTok Ads, Telegram channels, and direct referral campaigns across multiple target countries.',
-      tech: 'GTM, Google Analytics 4, Meta Pixel, Custom Fingerprinting, UTM/fbclid/gclid/ttclid parser',
-      resilience: 'Server-side CAPI fallback, cookie preservation in local storage, automated client_id deduplication.'
+      title: 'Global Traffic Ingestion & CAPI / MAPI AdTech Rails',
+      desc: 'Captures paid and organic clicks from Meta, Google Ads, TikTok Ads, Telegram channels, and direct campaigns across 90+ countries. Ingests leads through automated MAPI (Marketing API) lead forms and synchronizes conversion feedback via CAPI.',
+      tech: 'Meta CAPI, Meta MAPI, Google Ads API, TikTok Events API, GTM, GA4 Measurement Protocol, UTM/fbclid/gclid parser',
+      resilience: 'Server-side CAPI event deduplication (event_id), cookie preservation (fbp/fbc), automated lookalike cohort sync via MAPI.'
     },
     'compulse': {
       title: 'Compulse.cc Continuous Tracking & Pixel Guard',
@@ -316,14 +316,14 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     'queue': {
       title: 'Custom Rate Limiter & Webhook Gateway (RabbitMQ Replaced)',
-      desc: 'Under massive advertising spikes (20,000+ concurrent leads), standard RabbitMQ message brokers failed to handle asymmetric downstream rate limits (CRM strict 7 req/s vs WhatsApp 40 req/s vs Accounting APIs), causing queue backpressure stalls. Alexander built a dedicated Custom Rate Limiter Gateway that receives webhooks from n8n, buffers them in Redis token buckets, prioritizes hot sales leads, and smoothly distributes traffic to downstream services with zero drops.',
+      desc: 'Under massive advertising spikes (20,000+ concurrent leads), standard RabbitMQ message brokers failed to handle asymmetric downstream rate limits (CRM strict 7 req/s vs WAPI/WhatsApp 40 req/s vs Accounting APIs), causing queue backpressure stalls. Alexander built a dedicated Custom Rate Limiter Gateway that receives webhooks from n8n, buffers them in Redis token buckets, prioritizes hot sales leads, and smoothly distributes traffic to downstream services with zero drops.',
       tech: 'Custom Dispatcher Microservice, Redis Token Bucket & Sorted Sets, Dynamic Jitter Backoff, RabbitMQ Replacement',
       resilience: 'Isolated multi-tenant destination queues, zero HTTP 429 CRM lockouts, automated dead-letter retry.'
     },
     'n8n': {
-      title: 'Self-Hosted n8n Production Cluster & Battle-Hardened Architecture',
-      desc: 'Expert workflow orchestration forged by having made, debugged, and resolved every conceivable failure mode in high-load production (memory exhaustion in loop nodes, infinite execution cycles, unhandled null schema drifts, race conditions across webhook workers, and non-idempotent duplicate writes). Executes 100+ critical production pipelines across marketing, sales, FinTech, and HR.',
-      tech: 'n8n 1.x & 2.x, Docker Swarm / Compose, PostgreSQL execution store, Custom JavaScript / TypeScript code nodes, Redis Queue Workers',
+      title: 'Self-Hosted n8n Production Cluster (CAPI • MAPI • WAPI)',
+      desc: 'Expert workflow orchestration forged by having made, debugged, and resolved every conceivable failure mode in high-load production (memory exhaustion in loop nodes, infinite execution cycles, unhandled null schema drifts, race conditions across webhook workers, and non-idempotent duplicate writes). Orchestrates the complete CAPI (Conversions), MAPI (Marketing), and WAPI (WhatsApp Business) pipeline across 100+ critical production pipelines.',
+      tech: 'n8n 1.x & 2.x, CAPI • MAPI • WAPI Orchestration, Docker Swarm / Compose, PostgreSQL, Custom TypeScript code nodes, Redis Workers',
       resilience: 'Strict idempotency keys, sub-workflow error isolation, dead-letter queues (DLQ), stream chunking to eliminate worker OOM crashes.'
     },
     'crm_cdp': {
