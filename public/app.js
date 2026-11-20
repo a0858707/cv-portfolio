@@ -321,10 +321,10 @@ document.addEventListener('DOMContentLoaded', () => {
       resilience: 'Isolated multi-tenant destination queues, zero HTTP 429 CRM lockouts, automated dead-letter retry.'
     },
     'n8n': {
-      title: 'Self-Hosted n8n Production Cluster',
-      desc: 'High-performance orchestration engine executing 100+ business workflows across marketing, CRM, sales routing, finance, and cross-department data flows.',
-      tech: 'n8n 1.x & 2.x, Docker Swarm / Compose, PostgreSQL execution store, Custom JavaScript code nodes, REST APIs',
-      resilience: 'Idempotency checks, automated retry policies, database connection pooling, webhook error triggers.'
+      title: 'Self-Hosted n8n Production Cluster & Battle-Hardened Architecture',
+      desc: 'Expert workflow orchestration forged by having made, debugged, and resolved every conceivable failure mode in high-load production (memory exhaustion in loop nodes, infinite execution cycles, unhandled null schema drifts, race conditions across webhook workers, and non-idempotent duplicate writes). Executes 100+ critical production pipelines across marketing, sales, FinTech, and HR.',
+      tech: 'n8n 1.x & 2.x, Docker Swarm / Compose, PostgreSQL execution store, Custom JavaScript / TypeScript code nodes, Redis Queue Workers',
+      resilience: 'Strict idempotency keys, sub-workflow error isolation, dead-letter queues (DLQ), stream chunking to eliminate worker OOM crashes.'
     },
     'crm_cdp': {
       title: 'Enterprise CRM + Custom Widgets & Scalable CDP',
