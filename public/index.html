@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Bogolepov — RevOps & Automation Architect | n8n, CRM, APIs & AI Monitoring</title>
+  <meta name="description" content="Portfolio of Alex Bogolepov — RevOps & Automation Architect specializing in high-throughput n8n workflows, CRM/CDP architecture, marketing attribution, and autonomous AI error monitoring.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cyan: '#00f2fe',
+              blue: '#4facfe',
+              dark: '#07090e',
+              card: '#0f172a',
+              border: 'rgba(255, 255, 255, 0.08)'
+            }
+          },
+          animation: {
+            'fadeIn': 'fadeIn 0.3s ease-in-out',
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(6px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" type="image/jpeg" href="/profile_photo.jpg">
+</head>
+<body class="bg-[#07090e] text-slate-100 min-h-screen relative font-sans antialiased selection:bg-cyan-500 selection:text-slate-950">
+
+  <!-- Ambient Glow Orbs -->
+  <div class="glow-orb-cyan top-0 left-1/4"></div>
+  <div class="glow-orb-violet top-[900px] right-10"></div>
+
+  <!-- ─── HEADER / NAVBAR ────────────────────────────────────────── -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#07090e]/80 border-b border-white/10 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo / Identity -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="relative w-11 h-11 rounded-full p-0.5 bg-gradient-to-tr from-cyan-400 via-blue-500 to-violet-500">
+          <img src="/profile_photo.jpg" alt="Alex Bogolepov" class="w-full h-full object-cover rounded-full">
+          <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-500 border-2 border-[#07090e] rounded-full pulse-indicator"></span>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-base text-white group-hover:text-cyan-400 transition-colors">Alex Bogolepov</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">cv.compulse.cc</span>
+          </div>
+          <p class="text-xs text-slate-400 font-mono">RevOps & Automation Architect</p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-900/60 p-1.5 rounded-full border border-white/10 text-xs font-medium">
+        <a href="#tab-marketing" onclick="document.querySelector('[data-tab=marketing]').click()" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/5 transition flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Marketing & n8n
+        </a>
+        <a href="#tab-crm" onclick="document.querySelector('[data-tab=crm]').click()" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/5 transition">CRM & CDP</a>
+        <a href="#tab-finance" onclick="document.querySelector('[data-tab=finance]').click()" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/5 transition">FinTech</a>
+        <a href="#tab-hr" onclick="document.querySelector('[data-tab=hr]').click()" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/5 transition">HR App</a>
+        <a href="#tab-legal" onclick="document.querySelector('[data-tab=legal]').click()" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/5 transition">Legal Ops</a>
+        <a href="#architecture" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/5 transition">Architecture</a>
+        <a href="#compulse" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition">Compulse.cc</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3">
+        <a href="https://calendar.app.google/UeqAokAbZ4mWwfvA9" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-semibold text-xs hover:shadow-[0_0_20px_rgba(0,242,254,0.35)] transition-all transform hover:-translate-y-0.5">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Book Call</span>
+        </a>
+
+        <a href="https://t.me/bogolepovauto" target="_blank" rel="noopener noreferrer" 
+           class="p-2 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-cyan-400 border border-white/10 transition" title="Telegram">
+          <i data-lucide="send" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-20">
+
+    <!-- ─── HERO SECTION ─────────────────────────────────────────── -->
+    <section class="relative pt-6 pb-8">
+      
+      <!-- Top Status Pill -->
+      <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-cyan-500/30 text-xs font-mono text-cyan-300 mb-6 backdrop-blur">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-indicator"></span>
+        <span>Senior RevOps & Lead Automation Engineer | 6.5+ Years International EdTech</span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column: High-Impact Selling Copy -->
+        <div class="lg:col-span-7 space-y-6">
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15]">
+            Architecting <span class="text-gradient-cyan">High-Throughput n8n</span> Automations, Resilient CRM/CDP & <span class="text-gradient-emerald">AI Self-Healing</span>.
+          </h1>
+          
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+            I build the critical technical layer between advertising, CRM, communications, finance, and data pipelines. From zero-dropped-lead WhatsApp dispatching under peak volume, to breaking CRM mailing limits with modern CDP tools, to server-side attribution and autonomous AI agents monitoring workflow failures.
+          </p>
+
+          <!-- Core Value Bullet Points -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-mono">
+            <div class="flex items-center gap-2 text-slate-300 bg-slate-900/70 p-2.5 rounded-lg border border-white/5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span>High-Load n8n + Redis Queue Engine</span>
+            </div>
+            <div class="flex items-center gap-2 text-slate-300 bg-slate-900/70 p-2.5 rounded-lg border border-white/5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span>amoCRM / Kommo API v4 & CDP Scalability</span>
+            </div>
+            <div class="flex items-center gap-2 text-slate-300 bg-slate-900/70 p-2.5 rounded-lg border border-white/5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-violet-400 shrink-0"></i>
+              <span>Meta CAPI, GA4 & Compulse.cc Tracking Guard</span>
+            </div>
+            <div class="flex items-center gap-2 text-slate-300 bg-slate-900/70 p-2.5 rounded-lg border border-white/5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 shrink-0"></i>
+              <span>Autonomous AI Error Diagnostic Agent</span>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-4 pt-4">
+            <a href="https://calendar.app.google/UeqAokAbZ4mWwfvA9" target="_blank" rel="noopener noreferrer"
+               class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 text-slate-950 font-bold text-sm shadow-[0_0_25px_rgba(0,242,254,0.3)] hover:shadow-[0_0_35px_rgba(0,242,254,0.5)] transition transform hover:-translate-y-0.5 flex items-center gap-2.5">
+              <i data-lucide="calendar" class="w-4 h-4"></i>
+              <span>Schedule Discovery Call</span>
+            </a>
+
+            <a href="/Alexander_Bogolepov_CV.pdf" download="Alex_Bogolepov_CV.pdf"
+               class="px-5 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold text-sm border border-white/10 hover:border-cyan-500/40 transition flex items-center gap-2">
+              <i data-lucide="download" class="w-4 h-4 text-cyan-400"></i>
+              <span>Download CV (PDF)</span>
+            </a>
+
+            <a href="https://linkedin.com/in/bogolepovauto" target="_blank" rel="noopener noreferrer"
+               class="px-4 py-3.5 rounded-xl bg-slate-900/70 hover:bg-slate-800 text-slate-300 hover:text-white border border-white/10 transition flex items-center gap-2">
+              <i data-lucide="linkedin" class="w-4 h-4 text-blue-400"></i>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Interactive Video & Media Card -->
+        <div class="lg:col-span-5 space-y-4">
+          
+          <div class="glass-panel glass-panel-glow p-4 relative overflow-hidden">
+            
+            <!-- Video Header Strip -->
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse"></span>
+                <span class="text-xs font-mono font-semibold text-slate-200 uppercase tracking-wider">Video Introduction</span>
+              </div>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">
+                10s Fast Intro
+              </span>
+            </div>
+
+            <!-- Video Container -->
+            <div class="video-wrapper aspect-video relative group">
+              <video id="heroVideo" playsinline loop preload="metadata" poster="/banner_art.jpg">
+                <source src="/video.mp4" type="video/mp4">
+                Your browser does not support video playback.
+              </video>
+
+              <!-- Video Overlay Controls -->
+              <div class="video-overlay-ctrls opacity-90 group-hover:opacity-100 transition-opacity">
+                <!-- Top Row -->
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-mono bg-black/60 px-2 py-1 rounded text-cyan-300 backdrop-blur">
+                    Alex Bogolepov • RevOps Engineer
+                  </span>
+                  <button id="videoMuteBtn" class="p-1.5 rounded-lg bg-black/60 hover:bg-black/90 text-white backdrop-blur transition" title="Toggle Sound">
+                    <i data-lucide="volume-2" id="volumeIcon" class="w-4 h-4 hidden"></i>
+                    <i data-lucide="volume-x" id="muteIcon" class="w-4 h-4"></i>
+                  </button>
+                </div>
+
+                <!-- Bottom Row: Play & Progress -->
+                <div class="space-y-2">
+                  <div class="flex items-center gap-3">
+                    <button id="videoPlayBtn" class="p-2 rounded-full bg-cyan-400 text-slate-950 hover:bg-cyan-300 transition shadow-[0_0_15px_rgba(0,242,254,0.4)]">
+                      <i data-lucide="play" id="playIcon" class="w-4 h-4 hidden"></i>
+                      <i data-lucide="pause" id="pauseIcon" class="w-4 h-4"></i>
+                    </button>
+                    <div class="flex-1 bg-white/20 h-1.5 rounded-full overflow-hidden">
+                      <div id="videoProgress" class="bg-cyan-400 h-full w-0 transition-all duration-100"></div>
+                    </div>
+                    <span id="videoTime" class="text-[10px] font-mono text-slate-300">00:00 / 00:10</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Profile Summary Strip Below Video -->
+            <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs">
+              <div class="flex items-center gap-2.5">
+                <img src="/avatar.jpg" alt="Profile" class="w-8 h-8 rounded-full object-cover border border-cyan-400/50">
+                <div>
+                  <div class="font-bold text-slate-200">Alex Bogolepov</div>
+                  <div class="text-[11px] text-slate-400 font-mono">Tashkent, Uzbekistan (UTC+5)</div>
+                </div>
+              </div>
+              <div class="text-right">
+                <span class="inline-flex items-center gap-1.5 text-[11px] font-mono text-emerald-400">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Open to Contract / Full-Time
+                </span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Banner Art Showcase Strip -->
+          <div class="rounded-xl overflow-hidden border border-white/10 bg-slate-900/40 relative">
+            <img src="/banner_art.jpg" alt="RevOps Engineer Architecture" class="w-full h-24 object-cover object-top opacity-85 hover:opacity-100 transition">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#07090e] via-transparent to-transparent flex items-end p-2.5">
+              <span class="text-[10px] font-mono text-cyan-300 bg-slate-900/80 px-2 py-0.5 rounded backdrop-blur border border-cyan-500/30">
+                { parser: "n8n", attribution: "Meta CAPI + GA4", monitor: "Compulse.cc" }
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ─── STATS / TRUST STRIP ──────────────────────────────────── -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 pt-8 border-t border-white/10">
+        
+        <div class="glass-panel p-4 text-center sm:text-left">
+          <div class="text-2xl sm:text-3xl font-extrabold font-mono text-cyan-400">6.5+ Yrs</div>
+          <div class="text-xs text-slate-400 font-medium mt-1">Enterprise RevOps Experience (Algorithmics / Algonova)</div>
+        </div>
+
+        <div class="glass-panel p-4 text-center sm:text-left">
+          <div class="text-2xl sm:text-3xl font-extrabold font-mono text-emerald-400">10M+</div>
+          <div class="text-xs text-slate-400 font-medium mt-1">Automated WhatsApp / WABA & SMS Dispatched</div>
+        </div>
+
+        <div class="glass-panel p-4 text-center sm:text-left">
+          <div class="text-2xl sm:text-3xl font-extrabold font-mono text-violet-400">99.98%</div>
+          <div class="text-xs text-slate-400 font-medium mt-1">Pipeline Uptime with AI Anomaly & Error Monitoring</div>
+        </div>
+
+        <div class="glass-panel p-4 text-center sm:text-left">
+          <div class="text-2xl sm:text-3xl font-extrabold font-mono text-amber-400">0%</div>
+          <div class="text-xs text-slate-400 font-medium mt-1">Dropped Leads via Redis Queue & Idempotency Architecture</div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ─── THE CORE DEPARTMENT & SOLUTION TABS ──────────────────── -->
+    <section id="solutions" class="space-y-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest font-bold">Interactive Deep-Dive</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">
+            Engineered Systems & Real Production Solutions
+          </h2>
+          <p class="text-sm text-slate-400 mt-1">
+            Explore the exact architectures, bottlenecks solved, and custom tools implemented across departments.
+          </p>
+        </div>
+
+        <div class="text-xs text-slate-400 font-mono">
+          Click any department to inspect technical cases:
+        </div>
+      </div>
+
+      <!-- Tab Buttons Bar -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none border-b border-white/10">
+        
+        <button data-tab="marketing" class="tab-btn active px-4 py-2.5 rounded-xl border border-white/10 bg-slate-900/80 text-sm font-semibold flex items-center gap-2">
+          <i data-lucide="zap" class="w-4 h-4 text-cyan-400"></i>
+          <span>Marketing & n8n</span>
+          <span class="text-[10px] uppercase font-mono px-1.5 py-0.2 rounded bg-cyan-400/20 text-cyan-300 font-bold">Main</span>
+        </button>
+
+        <button data-tab="crm" class="tab-btn px-4 py-2.5 rounded-xl border border-white/10 bg-slate-900/80 text-sm font-semibold text-slate-400 hover:text-white flex items-center gap-2">
+          <i data-lucide="database" class="w-4 h-4 text-blue-400"></i>
+          <span>CRM & Scalable CDP</span>
+        </button>
+
+        <button data-tab="finance" class="tab-btn px-4 py-2.5 rounded-xl border border-white/10 bg-slate-900/80 text-sm font-semibold text-slate-400 hover:text-white flex items-center gap-2">
+          <i data-lucide="credit-card" class="w-4 h-4 text-emerald-400"></i>
+          <span>FinTech & Reconciliation</span>
+        </button>
+
+        <button data-tab="hr" class="tab-btn px-4 py-2.5 rounded-xl border border-white/10 bg-slate-900/80 text-sm font-semibold text-slate-400 hover:text-white flex items-center gap-2">
+          <i data-lucide="users" class="w-4 h-4 text-violet-400"></i>
+          <span>HR & Perf Review App</span>
+        </button>
+
+        <button data-tab="legal" class="tab-btn px-4 py-2.5 rounded-xl border border-white/10 bg-slate-900/80 text-sm font-semibold text-slate-400 hover:text-white flex items-center gap-2">
+          <i data-lucide="file-check-2" class="w-4 h-4 text-amber-400"></i>
+          <span>Legal & DocOps</span>
+        </button>
+
+      </div>
+
+      <!-- ─── TAB 1: MARKETING & n8n (CORE) ───────────────────────── -->
+      <div id="tab-marketing" class="tab-content space-y-8 animate-fadeIn">
+        
+        <div class="glass-panel p-6 border-cyan-500/30 relative">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-semibold">
+              Primary Expertise & Architectural Core
+            </span>
+            <span class="text-xs font-mono text-slate-400">Production Workflows: 100+</span>
+          </div>
+
+          <h3 class="text-xl sm:text-2xl font-bold text-white">
+            High-Volume n8n Engine, Conversion Attribution & Autonomous Error Monitoring
+          </h3>
+          <p class="text-sm text-slate-300 mt-2 max-w-4xl">
+            Marketing automation at scale fails when infrastructure is built on brittle point-to-point webhooks. At Algorithmics, I built an enterprise-grade automation backbone combining self-hosted n8n workers, Redis request buffering, server-side CAPI event matching, and continuous AI monitoring.
+          </p>
+        </div>
+
+        <!-- 3 Sub-Tracks in Marketing -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          
+          <!-- Sub-Track 1: High-Load Conversions & Resilient Sendouts -->
+          <div class="glass-panel p-6 space-y-4 hover:border-cyan-500/40 transition">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center border border-cyan-500/20">
+              <i data-lucide="send" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-mono text-cyan-400 uppercase">Sub-Track 1</span>
+              <h4 class="text-lg font-bold text-white mt-0.5">High-Load Sendouts & Concurrency</h4>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              When sales and marketing push sudden 20,000+ lead broadcasts, direct API calls to WhatsApp/WABA (Radist, 360dialog, Twilio) trigger HTTP 429 rate limits and dropped webhook responses.
+            </p>
+            <div class="space-y-2 pt-2 border-t border-white/5 text-xs font-mono">
+              <div class="text-slate-400"><b>Architecture:</b> amoCRM Webhook → Redis Buffer → n8n Worker Cluster → WABA API.</div>
+              <div class="text-slate-400"><b>Resilience:</b> Dynamic token bucket rate-limiting (40 req/s), exponential backoff with jitter, delivery status callback synchronization.</div>
+              <div class="text-emerald-400"><b>Result:</b> 100% delivery receipt tracking, zero dropped leads, processed 10M+ messages.</div>
+            </div>
+          </div>
+
+          <!-- Sub-Track 2: Attribution, Data Verification & Compulse.cc -->
+          <div class="glass-panel p-6 space-y-4 hover:border-emerald-500/40 transition">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center border border-emerald-500/20">
+              <i data-lucide="target" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-mono text-emerald-400 uppercase">Sub-Track 2</span>
+              <h4 class="text-lg font-bold text-white mt-0.5">Attribution & Data Verification</h4>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              iOS ATT and ad blockers caused 30%+ dropoffs in client-side Meta Pixel and GA4 tracking, distorting ROAS and ad budget allocation across international regions.
+            </p>
+            <div class="space-y-2 pt-2 border-t border-white/5 text-xs font-mono">
+              <div class="text-slate-400"><b>Architecture:</b> Hybrid Client + Server-Side CAPI tracking, GTM, Google Client ID, FBP/FBC cookie preservation into amoCRM custom fields.</div>
+              <div class="text-slate-400"><b>Compulse.cc:</b> Designed and deployed continuous Playwright & API monitor scanning tags across dozens of landing pages 24/7.</div>
+              <div class="text-cyan-400"><b>Result:</b> 99.9% conversion event deduplication, real-time dashboards in Superset & Vertica.</div>
+            </div>
+          </div>
+
+          <!-- Sub-Track 3: Autonomous AI Agent Error Monitor -->
+          <div class="glass-panel p-6 space-y-4 hover:border-violet-500/40 transition">
+            <div class="w-10 h-10 rounded-xl bg-violet-500/10 text-violet-400 flex items-center justify-center border border-violet-500/20">
+              <i data-lucide="cpu" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-mono text-violet-400 uppercase">Sub-Track 3</span>
+              <h4 class="text-lg font-bold text-white mt-0.5">AI Agent n8n Error Supervisor</h4>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Silent failures in n8n (expired bearer tokens, third-party 502s, unexpected JSON schema changes) often went unnoticed until sales complained about missing deals.
+            </p>
+            <div class="space-y-2 pt-2 border-t border-white/5 text-xs font-mono">
+              <div class="text-slate-400"><b>Architecture:</b> AI Monitoring Agent hooked into n8n execution DB & error webhooks.</div>
+              <div class="text-slate-400"><b>Self-Healing:</b> Automatically categorizes errors, triggers idempotent retries for transient blips, and generates hot-patch code snippets for schema drifts.</div>
+              <div class="text-violet-400"><b>Result:</b> Instant RCA alerts in Mattermost/Telegram with affected lead IDs before marketing spend is burnt.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ─── INTERACTIVE LIVE SIMULATOR: AI AGENT MONITOR ──────── -->
+        <div class="glass-panel p-6 border-violet-500/30 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-violet-400 animate-pulse"></span>
+                <h4 class="text-base font-bold text-white">Live Interactive Demo: AI Agent n8n Error Supervisor</h4>
+              </div>
+              <p class="text-xs text-slate-400 mt-0.5">
+                Simulate a production integration failure below and watch the AI agent intercept, diagnose, and self-heal in real time.
+              </p>
+            </div>
+
+            <!-- Simulation Triggers -->
+            <div class="flex flex-wrap gap-2">
+              <button data-scenario="rate_limit" class="sim-btn px-3 py-1.5 rounded-lg bg-cyan-500/20 border border-cyan-500 text-xs font-mono text-cyan-300 hover:bg-cyan-500/30 transition">
+                ⚡ WhatsApp 429 Rate Limit
+              </button>
+              <button data-scenario="token_expired" class="sim-btn px-3 py-1.5 rounded-lg bg-slate-800 border border-white/10 text-xs font-mono text-slate-300 hover:bg-slate-700 transition">
+                🔑 Meta CAPI Token Expiry
+              </button>
+              <button data-scenario="schema_drift" class="sim-btn px-3 py-1.5 rounded-lg bg-slate-800 border border-white/10 text-xs font-mono text-slate-300 hover:bg-slate-700 transition">
+                🧩 amoCRM Schema Drift
+              </button>
+            </div>
+          </div>
+
+          <!-- Terminal Window -->
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="flex items-center gap-1.5">
+                <span class="terminal-dot bg-rose-500/80"></span>
+                <span class="terminal-dot bg-amber-500/80"></span>
+                <span class="terminal-dot bg-emerald-500/80"></span>
+                <span class="text-[11px] font-mono text-slate-400 ml-2">agent_supervisor_daemon.log — n8n Production Cluster</span>
+              </div>
+              <div id="simSpinner" class="hidden text-cyan-400 text-xs font-mono flex items-center gap-1.5">
+                <i data-lucide="loader-2" class="w-3.5 h-3.5 animate-spin"></i>
+                <span>Analyzing Stack Trace...</span>
+              </div>
+            </div>
+            <div id="terminalOutput" class="p-4 font-mono text-xs space-y-2 min-h-[160px] bg-[#050811]">
+              <!-- Filled dynamically by app.js -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ─── TAB 2: CRM & SCALABLE CDP ARCHITECTURE ──────────────── -->
+      <div id="tab-crm" class="tab-content hidden space-y-8">
+        
+        <div class="glass-panel p-6 border-blue-500/30">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 font-semibold">
+              Architectural Case Study
+            </span>
+            <span class="text-xs font-mono text-slate-400">amoCRM / Kommo API v4 & CDP</span>
+          </div>
+
+          <h3 class="text-xl sm:text-2xl font-bold text-white">
+            Overcoming CRM Rate Limits: Bringing CDP Architecture into Marketing Ops
+          </h3>
+          <p class="text-sm text-slate-300 mt-2 max-w-4xl">
+            When an international EdTech or SaaS scales past tens of thousands of active leads, standard CRM architectures hit hard walls: strict API rate limits (e.g. 7-10 requests/sec), message send quotas, and interface lockouts. Here is how I solve it by introducing Customer Data Platform (CDP) tooling.
+          </p>
+        </div>
+
+        <!-- The 2-Choice CDP Strategy -->
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="text-base font-bold text-white flex items-center gap-2">
+              <i data-lucide="layers" class="w-4 h-4 text-cyan-400"></i>
+              <span>Select Implementation Approach:</span>
+            </h4>
+            
+            <div class="inline-flex rounded-lg bg-slate-900 p-1 border border-white/10 text-xs font-mono">
+              <button data-cdp-mode="n8n" class="cdp-toggle-btn px-3 py-1 rounded-md bg-cyan-500 text-slate-950 font-bold transition">
+                Option A: n8n Microservices
+              </button>
+              <button data-cdp-mode="cdp" class="cdp-toggle-btn px-3 py-1 rounded-md text-slate-400 hover:text-white transition">
+                Option B: Dedicated CDP Tool
+              </button>
+            </div>
+          </div>
+
+          <!-- Panel A: n8n Microservices -->
+          <div data-cdp-target="n8n" class="cdp-panel-card glass-panel p-6 space-y-4 border-cyan-500/30">
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-xs font-mono text-cyan-400 uppercase font-semibold">Engineering-Driven High Throughput</span>
+                <h5 class="text-lg font-bold text-white mt-1">Headless Event-Driven n8n Pipelines</h5>
+              </div>
+              <span class="text-xs font-mono px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-white/10">Best for: Max Speed & Lean Cost</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              When CRM limits choke standard broadcasts, I construct headless data pipelines in n8n backed by Redis and PostgreSQL. Customer audience segments are queried directly from the data warehouse, enriched with engagement signals, and dispatched directly through messaging provider APIs without touching CRM bandwidth limits.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2 text-xs font-mono">
+              <div class="p-3 bg-slate-900/60 rounded-lg border border-white/5">
+                <div class="text-cyan-400 font-bold mb-1">Queue Pacing</div>
+                <div class="text-slate-400">Throttles requests to exact carrier limits, avoiding CRM locks.</div>
+              </div>
+              <div class="p-3 bg-slate-900/60 rounded-lg border border-white/5">
+                <div class="text-emerald-400 font-bold mb-1">Zero Per-Seat Cost</div>
+                <div class="text-slate-400">Runs on self-hosted Docker nodes, zero expensive SaaS subscription bloat.</div>
+              </div>
+              <div class="p-3 bg-slate-900/60 rounded-lg border border-white/5">
+                <div class="text-violet-400 font-bold mb-1">Bidirectional Sync</div>
+                <div class="text-slate-400">Customer replies and conversions sync back to amoCRM asynchronously.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel B: Dedicated Standalone CDP -->
+          <div data-cdp-target="cdp" class="cdp-panel-card hidden glass-panel p-6 space-y-4 border-violet-500/30">
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-xs font-mono text-violet-400 uppercase font-semibold">Marketer-Empowered Visual Operations</span>
+                <h5 class="text-lg font-bold text-white mt-1">Dedicated Customer Data Platform (CDP)</h5>
+              </div>
+              <span class="text-xs font-mono px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-white/10">Best for: Growth Marketer Autonomy</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              For marketing teams requiring daily visual campaign management, I deploy a standalone CDP tool integrated with the CRM and messaging channels. Marketers can build dynamic cohorts (e.g., "Attended trial class in Uzbekistan, high engagement, no purchase in 48h") and trigger multi-channel drip journeys without requiring engineering tickets.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2 text-xs font-mono">
+              <div class="p-3 bg-slate-900/60 rounded-lg border border-white/5">
+                <div class="text-violet-400 font-bold mb-1">Visual Cohort Builder</div>
+                <div class="text-slate-400">Non-technical marketers segment users by behavior & custom attributes.</div>
+              </div>
+              <div class="p-3 bg-slate-900/60 rounded-lg border border-white/5">
+                <div class="text-blue-400 font-bold mb-1">Multi-Channel Journeys</div>
+                <div class="text-slate-400">Orchestrates WhatsApp, Email, Telegram, and SMS drip logic.</div>
+              </div>
+              <div class="p-3 bg-slate-900/60 rounded-lg border border-white/5">
+                <div class="text-emerald-400 font-bold mb-1">CRM Decoupling</div>
+                <div class="text-slate-400">Eliminates CRM UI lag and protects sales teams from broadcast spam.</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- amoCRM Engineering Depth Grid -->
+        <div class="glass-panel p-6 space-y-4">
+          <h4 class="text-base font-bold text-white flex items-center gap-2">
+            <i data-lucide="cpu" class="w-4 h-4 text-cyan-400"></i>
+            <span>Deep amoCRM / Kommo Architectural Capabilities</span>
+          </h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-xs font-mono">
+            <div class="p-3 bg-slate-900/80 rounded-lg border border-white/5">
+              <div class="text-cyan-300 font-bold mb-1">API v4 Mastery</div>
+              <p class="text-slate-400">Complex batch queries, webhooks with token verification, custom entity models.</p>
+            </div>
+            <div class="p-3 bg-slate-900/80 rounded-lg border border-white/5">
+              <div class="text-emerald-300 font-bold mb-1">Lead Distribution</div>
+              <p class="text-slate-400">Automated round-robin, skill-based routing by language, region, and shift schedules.</p>
+            </div>
+            <div class="p-3 bg-slate-900/80 rounded-lg border border-white/5">
+              <div class="text-violet-300 font-bold mb-1">Custom Fields Hierarchy</div>
+              <p class="text-slate-400">Clean taxonomy preserving UTMs, client IDs, attribution hashes, and deal lifecycles.</p>
+            </div>
+            <div class="p-3 bg-slate-900/80 rounded-lg border border-white/5">
+              <div class="text-amber-300 font-bold mb-1">Warehouse Sync</div>
+              <p class="text-slate-400">Bidirectional incremental sync between amoCRM and PostgreSQL/Vertica.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ─── TAB 3: FINTECH & REVENUE INTEGRITY ───────────────────── -->
+      <div id="tab-finance" class="tab-content hidden space-y-8">
+        
+        <div class="glass-panel p-6 border-emerald-500/30">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-semibold">
+              FinOps & Revenue Infrastructure
+            </span>
+            <span class="text-xs font-mono text-slate-400">Multi-Gateway Integration</span>
+          </div>
+
+          <h3 class="text-xl sm:text-2xl font-bold text-white">
+            Automated Multi-Currency Billing, Gateway Reconciliation & Churn Recovery
+          </h3>
+          <p class="text-sm text-slate-300 mt-2 max-w-4xl">
+            In international education and subscription products, failed payments and settlement delays create severe revenue leakage. I designed end-to-end FinOps pipelines connecting payment processors, accounting software (Xero, Stripe, Telr), and CRM deals.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <div class="glass-panel p-6 space-y-3">
+            <div class="w-9 h-9 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center border border-emerald-500/20">
+              <i data-lucide="shield-check" class="w-4 h-4"></i>
+            </div>
+            <h4 class="text-base font-bold text-white">Idempotent Webhook Processing</h4>
+            <p class="text-xs text-slate-300">
+              Gateway webhooks (Stripe, Telr, local bank APIs) often send duplicated delivery attempts. Built cryptographic signature verification with Redis idempotency keys, ensuring zero double-charging or duplicate deal closures.
+            </p>
+          </div>
+
+          <div class="glass-panel p-6 space-y-3">
+            <div class="w-9 h-9 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center border border-blue-500/20">
+              <i data-lucide="repeat" class="w-4 h-4"></i>
+            </div>
+            <h4 class="text-base font-bold text-white">Automated Churn & Dunning Recovery</h4>
+            <p class="text-xs text-slate-300">
+              When recurring credit card transactions fail, an automated sequence triggers within 60 seconds: sends a personalized WhatsApp reminder with a secure 1-click update link, recovering 22%+ of churned payments without sales involvement.
+            </p>
+          </div>
+
+          <div class="glass-panel p-6 space-y-3">
+            <div class="w-9 h-9 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center border border-amber-500/20">
+              <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+            </div>
+            <h4 class="text-base font-bold text-white">Financial Settlement Reconciliation</h4>
+            <p class="text-xs text-slate-300">
+              Automated reconciliation engine cross-referencing bank gateway settlement files against amoCRM deal amounts and Xero general ledger entries. Discrepancies are flagged immediately in an audit dashboard.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ─── TAB 4: HR ONBOARDING & PERF REVIEW APP ───────────────── -->
+      <div id="tab-hr" class="tab-content hidden space-y-8">
+        
+        <div class="glass-panel p-6 border-violet-500/30">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-violet-500/10 text-violet-400 border border-violet-500/20 font-semibold">
+              HR Tech & Internal Tooling
+            </span>
+            <span class="text-xs font-mono text-slate-400">Scale: 500+ Distributed Employees</span>
+          </div>
+
+          <h3 class="text-xl sm:text-2xl font-bold text-white">
+            Automated Employee Onboarding & Custom 360° Performance Review Application
+          </h3>
+          <p class="text-sm text-slate-300 mt-2 max-w-4xl">
+            Rapid team growth leads to operational drag when onboarding and evaluations are done manually in disparate spreadsheets. I engineered automated HR lifecycle pipelines and built a dedicated Performance Review platform.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <div class="glass-panel p-6 space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-violet-500/10 text-violet-400 flex items-center justify-center border border-violet-500/20">
+                <i data-lucide="user-plus" class="w-4 h-4"></i>
+              </div>
+              <h4 class="text-lg font-bold text-white">Zero-Touch Onboarding Pipeline</h4>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              When a candidate is marked "Hired" in the ATS (or Fillout onboarding form), an automated n8n pipeline executes within 90 seconds:
+            </p>
+            <ul class="text-xs font-mono space-y-2 text-slate-300 list-disc list-inside">
+              <li>Generates secure Google Workspace accounts with department-specific 2FA policies.</li>
+              <li>Auto-provisions access to Mattermost/Slack channels, Jira Service Management, and team drives.</li>
+              <li>Schedules 30-60-90 day milestone check-in surveys via automated bot.</li>
+              <li>Maintains full GDPR-compliant employee records alongside the company DPO.</li>
+            </ul>
+          </div>
+
+          <div class="glass-panel p-6 space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center border border-cyan-500/20">
+                <i data-lucide="award" class="w-4 h-4"></i>
+              </div>
+              <h4 class="text-lg font-bold text-white">Custom 360° Performance Review App</h4>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Designed and built a purpose-built web application replacing chaotic Google Sheets evaluation cycles:
+            </p>
+            <ul class="text-xs font-mono space-y-2 text-slate-300 list-disc list-inside">
+              <li>Structured 360 review workflows: Self-review, Peer reviews, and Manager evaluation.</li>
+              <li>Automated nudge notifications via bot to employees with pending reviews.</li>
+              <li>Dynamic competency scoring calibration with interactive visual radar charts.</li>
+              <li>Secure manager dashboard with historical salary review and KPI tracking.</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ─── TAB 5: LEGAL & DOCOPS ───────────────────────────────── -->
+      <div id="tab-legal" class="tab-content hidden space-y-8">
+        
+        <div class="glass-panel p-6 border-amber-500/30">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 font-semibold">
+              Legal Tech & Document Workflow
+            </span>
+            <span class="text-xs font-mono text-slate-400">Contracts, NDAs & Signatures</span>
+          </div>
+
+          <h3 class="text-xl sm:text-2xl font-bold text-white">
+            Dynamic Contract Generation, Digital Signatures & CRM Archiving
+          </h3>
+          <p class="text-sm text-slate-300 mt-2 max-w-4xl">
+            Managing thousands of student enrollment agreements, tutor contracts, and vendor NDAs manually creates massive delays. I automated the entire document lifecycle from CRM trigger to certified digital signature and audit storage.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <div class="glass-panel p-6 space-y-3">
+            <div class="w-9 h-9 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center border border-amber-500/20">
+              <i data-lucide="file-text" class="w-4 h-4"></i>
+            </div>
+            <h4 class="text-base font-bold text-white">Dynamic Contract Templating</h4>
+            <p class="text-xs text-slate-300">
+              Automatically compiles legally validated PDF contracts by injecting student names, course schedules, tuition fees, and passport details directly from amoCRM deal fields.
+            </p>
+          </div>
+
+          <div class="glass-panel p-6 space-y-3">
+            <div class="w-9 h-9 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center border border-cyan-500/20">
+              <i data-lucide="check-square" class="w-4 h-4"></i>
+            </div>
+            <h4 class="text-base font-bold text-white">E-Signature Dispatch & Tracking</h4>
+            <p class="text-xs text-slate-300">
+              Dispatches signing links via WhatsApp and Email. Listens to webhook status updates (Opened, Viewed, Signed) and automatically advances the CRM deal stage to "Contract Signed".
+            </p>
+          </div>
+
+          <div class="glass-panel p-6 space-y-3">
+            <div class="w-9 h-9 rounded-lg bg-violet-500/10 text-violet-400 flex items-center justify-center border border-violet-500/20">
+              <i data-lucide="archive" class="w-4 h-4"></i>
+            </div>
+            <h4 class="text-base font-bold text-white">Secure Encrypted Cloud Archiving</h4>
+            <p class="text-xs text-slate-300">
+              Once signed, the final executed PDF with cryptographic timestamp is automatically attached to the customer card in amoCRM and backed up into encrypted cold storage for compliance.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ─── FULL-STACK ARCHITECTURE VISUALIZER ───────────────────── -->
+    <section id="architecture" class="space-y-6 pt-10 border-t border-white/10">
+      
+      <div>
+        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest font-bold">Systems Diagram</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">
+          The Enterprise Automation Pipeline
+        </h2>
+        <p class="text-sm text-slate-400 mt-1">
+          Click on any architectural node to inspect technical specifications, throughput metrics, and fail-safe protocols.
+        </p>
+      </div>
+
+      <div class="glass-panel p-6 overflow-x-auto">
+        <div class="min-w-[800px] flex items-center justify-between gap-3 text-xs font-mono relative py-4">
+          
+          <!-- Node 1: Traffic -->
+          <div data-node-id="traffic" class="arch-node cursor-pointer p-4 rounded-xl bg-slate-900 border border-cyan-500/40 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(0,242,254,0.25)] transition flex flex-col items-center gap-2 text-center w-40">
+            <i data-lucide="globe" class="w-6 h-6 text-cyan-400"></i>
+            <span class="font-bold text-white">Ad Traffic & Clicks</span>
+            <span class="text-[10px] text-slate-400">Meta, Google, TikTok</span>
+          </div>
+
+          <i data-lucide="arrow-right" class="w-5 h-5 text-slate-600 shrink-0"></i>
+
+          <!-- Node 2: Compulse.cc -->
+          <div data-node-id="compulse" class="arch-node cursor-pointer p-4 rounded-xl bg-slate-900 border border-emerald-500/40 hover:border-emerald-400 hover:shadow-[0_0_20px_rgba(16,185,129,0.25)] transition flex flex-col items-center gap-2 text-center w-44">
+            <i data-lucide="shield-check" class="w-6 h-6 text-emerald-400"></i>
+            <span class="font-bold text-emerald-300">Compulse.cc Guard</span>
+            <span class="text-[10px] text-slate-400">Tag & Pixel Verification</span>
+          </div>
+
+          <i data-lucide="arrow-right" class="w-5 h-5 text-slate-600 shrink-0"></i>
+
+          <!-- Node 3: Queue Buffer -->
+          <div data-node-id="queue" class="arch-node cursor-pointer p-4 rounded-xl bg-slate-900 border border-amber-500/40 hover:border-amber-400 hover:shadow-[0_0_20px_rgba(245,158,11,0.25)] transition flex flex-col items-center gap-2 text-center w-44">
+            <i data-lucide="layers" class="w-6 h-6 text-amber-400"></i>
+            <span class="font-bold text-amber-300">Redis & RabbitMQ</span>
+            <span class="text-[10px] text-slate-400">Concurrency Buffer</span>
+          </div>
+
+          <i data-lucide="arrow-right" class="w-5 h-5 text-slate-600 shrink-0"></i>
+
+          <!-- Node 4: n8n Cluster -->
+          <div data-node-id="n8n" class="arch-node cursor-pointer p-4 rounded-xl bg-gradient-to-b from-cyan-950 to-slate-900 border-2 border-cyan-400 hover:shadow-[0_0_25px_rgba(0,242,254,0.4)] transition flex flex-col items-center gap-2 text-center w-48 scale-105">
+            <i data-lucide="workflow" class="w-7 h-7 text-cyan-300"></i>
+            <span class="font-bold text-white text-sm">Self-Hosted n8n</span>
+            <span class="text-[10px] text-cyan-300">Docker Cluster (100+ Workflows)</span>
+          </div>
+
+          <i data-lucide="arrow-right" class="w-5 h-5 text-slate-600 shrink-0"></i>
+
+          <!-- Node 5: CRM & CDP -->
+          <div data-node-id="crm_cdp" class="arch-node cursor-pointer p-4 rounded-xl bg-slate-900 border border-blue-500/40 hover:border-blue-400 hover:shadow-[0_0_20px_rgba(79,172,254,0.25)] transition flex flex-col items-center gap-2 text-center w-44">
+            <i data-lucide="database" class="w-6 h-6 text-blue-400"></i>
+            <span class="font-bold text-blue-300">amoCRM & CDP</span>
+            <span class="text-[10px] text-slate-400">Customer Master Record</span>
+          </div>
+
+          <i data-lucide="arrow-right" class="w-5 h-5 text-slate-600 shrink-0"></i>
+
+          <!-- Node 6: AI Supervisor -->
+          <div data-node-id="ai_monitor" class="arch-node cursor-pointer p-4 rounded-xl bg-slate-900 border border-violet-500/40 hover:border-violet-400 hover:shadow-[0_0_20px_rgba(139,92,246,0.25)] transition flex flex-col items-center gap-2 text-center w-44">
+            <i data-lucide="cpu" class="w-6 h-6 text-violet-400"></i>
+            <span class="font-bold text-violet-300">AI Error Agent</span>
+            <span class="text-[10px] text-slate-400">Self-Healing Monitor</span>
+          </div>
+
+        </div>
+        <div class="text-center text-[11px] font-mono text-slate-400 pt-2 border-t border-white/5">
+          💡 Click any node above to inspect architecture specifications, tech stack, and failover design.
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ─── COMPULSE.CC SPOTLIGHT ────────────────────────────────── -->
+    <section id="compulse" class="glass-panel p-8 border-emerald-500/30 relative overflow-hidden">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-8 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-mono font-bold">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Live Product: compulse.cc</span>
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+            Continuous Marketing Pixel & Attribution Quality Monitor
+          </h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            I built <b>Compulse</b> as a dedicated enterprise monitoring service to eliminate silent attribution failures. Powered by Playwright headless browsers, Python, and direct Meta/GA4/TikTok APIs, Compulse simulates real user sessions across international landing pages 24/7 to ensure tracking pixels, CAPI events, and UTM parameters never break.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs font-mono">
+            <div class="p-3 bg-slate-900/60 rounded-lg border border-white/5">
+              <span class="text-emerald-400 font-bold block mb-1">Playwright Emulation</span>
+              <span class="text-slate-400">Detects ad blocker dropoffs & consent banner blockers.</span>
+            </div>
+            <div class="p-3 bg-slate-900/60 rounded-lg border border-white/5">
+              <span class="text-cyan-400 font-bold block mb-1">Meta CAPI Integrity</span>
+              <span class="text-slate-400">Verifies event_id deduplication & FBP/FBC parameter matching.</span>
+            </div>
+            <div class="p-3 bg-slate-900/60 rounded-lg border border-white/5">
+              <span class="text-amber-400 font-bold block mb-1">Real-Time Alerts</span>
+              <span class="text-slate-400">Mattermost and Telegram notifications before ad budget is lost.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4 flex flex-col items-center justify-center space-y-4 p-6 bg-slate-950/60 rounded-2xl border border-white/10 text-center">
+          <div class="w-16 h-16 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center border border-emerald-500/30 shadow-[0_0_20px_rgba(16,185,129,0.2)]">
+            <i data-lucide="activity" class="w-8 h-8"></i>
+          </div>
+          <div>
+            <div class="text-lg font-bold text-white">Live Health: All Pixels Active</div>
+            <div class="text-xs font-mono text-emerald-400 mt-0.5">cv.compulse.cc sub-service</div>
+          </div>
+          <a href="https://compulse.cc" target="_blank" rel="noopener noreferrer" 
+             class="px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition shadow-[0_0_15px_rgba(16,185,129,0.3)] flex items-center gap-2">
+            <span>Explore Compulse.cc</span>
+            <i data-lucide="external-link" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ─── EXPERIENCE & TRACK RECORD ─────────────────────────────── -->
+    <section id="experience" class="space-y-6 pt-6 border-t border-white/10">
+      
+      <div>
+        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest font-bold">Track Record</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">
+          Professional Background & Milestones
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- Algorithmics Global -->
+        <div class="glass-panel p-6 border-cyan-500/20 space-y-3">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+            <div>
+              <h3 class="text-lg font-bold text-white">Algorithmics Global / Algonova Global</h3>
+              <p class="text-xs font-mono text-cyan-400">RevOps / Automation Engineer</p>
+            </div>
+            <span class="text-xs font-mono px-3 py-1 rounded bg-slate-900 text-slate-300 border border-white/10 w-fit">
+              May 2020 – Present (6 years 7 months)
+            </span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Own the enterprise technical infrastructure connecting marketing, advertising, CRM, sales, communication, finance, and HR for a major international EdTech company. Designed amoCRM API v4 pipelines, self-hosted n8n cluster with custom Redis queues, server-side attribution with Meta CAPI, WABA automation, and AI anomaly detection.
+          </p>
+        </div>
+
+        <!-- SDO -->
+        <div class="glass-panel p-6 border-white/10 space-y-3">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+            <div>
+              <h3 class="text-lg font-bold text-white">OOO "SDO"</h3>
+              <p class="text-xs font-mono text-slate-400">System Administrator & Infrastructure Engineer</p>
+            </div>
+            <span class="text-xs font-mono px-3 py-1 rounded bg-slate-900 text-slate-400 border border-white/5 w-fit">
+              Dec 2017 – Apr 2020 (2 years 5 months)
+            </span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Administered 4 physical servers and 22 virtual servers (VMware, Hyper-V). Tested and developed a proprietary adaptive personnel training platform (Skolkovo Foundation project). Implemented Veeam backup and PBX telephony.
+          </p>
+        </div>
+
+        <!-- Education & Certifications -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="glass-panel p-4 space-y-1">
+            <span class="text-xs font-mono text-cyan-400">Education</span>
+            <div class="font-bold text-sm text-white">Tashkent University of Information Technologies</div>
+            <div class="text-xs text-slate-400">Bachelor's Degree in IT and Electronic Database Administration (2009–2012)</div>
+          </div>
+          <div class="glass-panel p-4 space-y-1">
+            <span class="text-xs font-mono text-emerald-400">Certifications</span>
+            <div class="font-bold text-sm text-white">Python 3 Programming Specialization</div>
+            <div class="text-xs text-slate-400">Coursera Professional Certificate (Nov 2023) • Xerox Russia Certified Analyst</div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ─── CALL TO ACTION & CONTACT STRIP ────────────────────────── -->
+    <section class="glass-panel p-8 sm:p-12 border-cyan-500/30 text-center relative overflow-hidden space-y-6">
+      
+      <div class="max-w-2xl mx-auto space-y-3">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white">
+          Ready to Scale Your RevOps & Automation Infrastructure?
+        </h2>
+        <p class="text-sm text-slate-300 leading-relaxed">
+          Whether you need high-throughput n8n orchestration, reliable CRM/CDP data synchronization, server-side attribution, or autonomous AI agents monitoring your pipelines — let's discuss your architecture.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+        
+        <a href="https://calendar.app.google/UeqAokAbZ4mWwfvA9" target="_blank" rel="noopener noreferrer"
+           class="px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 text-slate-950 font-bold text-sm shadow-[0_0_30px_rgba(0,242,254,0.35)] hover:shadow-[0_0_45px_rgba(0,242,254,0.55)] transition transform hover:-translate-y-0.5 flex items-center gap-2">
+          <i data-lucide="calendar" class="w-5 h-5"></i>
+          <span>Book a 30-Min Strategy Call</span>
+        </a>
+
+        <a href="https://t.me/bogolepovauto" target="_blank" rel="noopener noreferrer"
+           class="px-6 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-cyan-400 font-semibold text-sm border border-cyan-500/30 transition flex items-center gap-2">
+          <i data-lucide="send" class="w-5 h-5"></i>
+          <span>Message on Telegram</span>
+        </a>
+
+        <a href="mailto:a0858707@gmail.com"
+           class="px-6 py-4 rounded-xl bg-slate-900/60 hover:bg-slate-800 text-slate-200 font-semibold text-sm border border-white/10 transition flex items-center gap-2">
+          <i data-lucide="mail" class="w-5 h-5 text-slate-400"></i>
+          <span>a0858707@gmail.com</span>
+        </a>
+
+      </div>
+
+      <div class="pt-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-6 text-xs font-mono text-slate-400">
+        <span>📍 Tashkent, Uzbekistan (UTC+5)</span>
+        <span>📞 +7 (909) 9626337</span>
+        <a href="https://linkedin.com/in/bogolepovauto" target="_blank" class="hover:text-cyan-400 transition">LinkedIn: bogolepovauto</a>
+        <a href="https://github.com/a0858707" target="_blank" class="hover:text-cyan-400 transition">GitHub: a0858707</a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ─── ARCHITECTURE NODE DETAIL MODAL ───────────────────────── -->
+  <div id="archModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="glass-panel p-6 sm:p-8 max-w-lg w-full space-y-4 border-cyan-500/40 relative shadow-2xl animate-fadeIn">
+      
+      <button id="closeArchModal" class="absolute top-4 right-4 text-slate-400 hover:text-white p-1 rounded-lg bg-slate-800/80 transition">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div>
+        <span class="text-[11px] font-mono text-cyan-400 uppercase font-semibold">Node Specification</span>
+        <h3 id="modalTitle" class="text-xl font-bold text-white mt-1">Component Details</h3>
+      </div>
+
+      <p id="modalDesc" class="text-xs sm:text-sm text-slate-300 leading-relaxed"></p>
+
+      <div class="space-y-3 pt-3 border-t border-white/10 text-xs font-mono">
+        <div>
+          <span class="text-slate-400 block mb-0.5">Technologies:</span>
+          <span id="modalTech" class="text-cyan-300 font-semibold"></span>
+        </div>
+        <div>
+          <span class="text-slate-400 block mb-0.5">High-Load Failover Strategy:</span>
+          <span id="modalResilience" class="text-emerald-300"></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ─── FOOTER ───────────────────────────────────────────────── -->
+  <footer class="border-t border-white/10 bg-[#05070c] py-8 text-center text-xs font-mono text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        © 2026 Alex Bogolepov. All rights reserved. • Built for Railway & Cloudflare (<span class="text-cyan-400">cv.compulse.cc</span>)
+      </div>
+      <div class="flex items-center gap-4 text-slate-400">
+        <a href="https://github.com/a0858707" target="_blank" class="hover:text-cyan-400 transition">GitHub</a>
+        <a href="https://linkedin.com/in/bogolepovauto" target="_blank" class="hover:text-cyan-400 transition">LinkedIn</a>
+        <a href="https://compulse.cc" target="_blank" class="hover:text-cyan-400 transition">Compulse.cc</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
