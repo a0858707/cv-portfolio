@@ -328,14 +328,14 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     'crm_cdp': {
       title: 'Enterprise CRM + Custom Widgets & Scalable CDP',
-      desc: 'Master customer record layer featuring custom embedded CRM UI widgets (1-click invoicing, payment status from 1C/Xero, contract generator). When CRM mailing limits are capped, audience segments and drip sequences scale via dedicated CDP pipelines.',
-      tech: 'Enterprise CRM API v4, Custom JS Widgets, 1C:Enterprise / Xero Bridge, Kommo Architecture, Standalone CDP Platform',
+      desc: 'Master customer record layer featuring custom embedded CRM UI widgets (1-click invoicing, live payment status from ERP/Xero, contract generator). When CRM mailing limits are capped, audience segments and drip sequences scale via dedicated CDP pipelines.',
+      tech: 'Enterprise CRM API v4, Custom JS Widgets, ERP / Xero Bridge, Kommo Architecture, Standalone CDP Platform',
       resilience: 'Rate-limited request queuing (7 req/sec throttle), bidirectional entity synchronization, contact deduplication.'
     },
     'widgets_accounting': {
-      title: 'Custom CRM UI Widgets & Accounting Bridges (1C / Xero)',
-      desc: 'Embedded interactive interfaces inside CRM deal cards allowing sales reps to generate invoices, verify bank payment settlements from 1C and Xero, and track document signing without leaving the CRM. All closed transactions automatically trigger accounting ledger entries and tax document creation.',
-      tech: 'CRM JS SDK, REST API v4, 1C:Enterprise (UNF/BP/ZUP), Diadoc, Xero API, Webhook Callbacks',
+      title: 'Custom CRM UI Widgets & ERP Accounting Bridges (Xero / QuickBooks)',
+      desc: 'Embedded interactive interfaces inside CRM deal cards allowing sales reps to generate invoices, verify bank payment settlements from ERP and Xero, and track document signing without leaving the CRM. All closed transactions automatically trigger accounting ledger entries and tax document creation.',
+      tech: 'CRM JS SDK, REST API v4, ERP & Accounting APIs, Xero API, E-Signature Gateways, Webhook Callbacks',
       resilience: 'Asynchronous bank reconciliation, signature validation, zero manual data entry delay.'
     },
     'ai_monitor': {
