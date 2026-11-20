@@ -39,7 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (video && playBtn) {
-    // Attempt muted autoplay on load
+    // Explicitly guarantee NO looping
+    video.loop = false;
+    video.removeAttribute('loop');
+
+    // Attempt muted autoplay once on load
     video.muted = true;
     video.play().then(() => {
       updateVideoUI('playing');
@@ -90,6 +94,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const durSec = Math.floor(video.duration);
         if (timeDisplay) {
           timeDisplay.textContent = `00:${curSec < 10 ? '0' : ''}${curSec} / 00:${durSec < 10 ? '0' : ''}${durSec}`;
+        }
+
+        // Hard stop guard: guarantee the video stops at the end and NEVER loops
+        if (video.currentTime >= video.duration - 0.15) {
+          video.pause();
+          if (progressBar) progressBar.style.width = '100%';
+          updateVideoUI('ended');
+          if (window.lucide) window.lucide.createIcons();
         }
       }
     });
