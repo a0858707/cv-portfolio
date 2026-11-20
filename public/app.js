@@ -322,14 +322,14 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     'n8n': {
       title: 'Self-Hosted n8n Production Cluster (CAPI • MAPI • WAPI)',
-      desc: 'Expert workflow orchestration forged by having made, debugged, and resolved every conceivable failure mode in high-load production (memory exhaustion in loop nodes, infinite execution cycles, unhandled null schema drifts, race conditions across webhook workers, and non-idempotent duplicate writes). Orchestrates the complete CAPI (Conversions), MAPI (Marketing), and WAPI (WhatsApp Business) pipeline across 100+ critical production pipelines.',
-      tech: 'n8n 1.x & 2.x, CAPI • MAPI • WAPI Orchestration, Docker Swarm / Compose, PostgreSQL, Custom TypeScript code nodes, Redis Workers',
+      desc: 'Expert workflow orchestration forged by having made, debugged, and resolved every conceivable failure mode in high-load production. Powers the CAPI/MAPI/WAPI suite, automated Video Sales Machines (Zoom + Calendly + Google Calendar + Slack + WAPI + CRM) with probabilistic overbooking, custom LMS programming tutor scheduling, Mattermost primary invoice ingestion bots, and Jira enterprise automations.',
+      tech: 'n8n 1.x & 2.x, CAPI • MAPI • WAPI, Zoom & Calendly APIs, Jira & Mattermost Bots, Docker Swarm / Compose, TypeScript, Redis Workers',
       resilience: 'Strict idempotency keys, sub-workflow error isolation, dead-letter queues (DLQ), stream chunking to eliminate worker OOM crashes.'
     },
     'crm_cdp': {
-      title: 'Enterprise CRM + Custom Widgets & Scalable CDP',
-      desc: 'Master customer record layer featuring custom embedded CRM UI widgets (1-click checkout generation, live settlement status from Stripe / Xendit / Mercado Pago, and contract generator). When CRM mailing limits are capped, audience segments and drip sequences scale via dedicated CDP pipelines.',
-      tech: 'Enterprise CRM API v4, Custom JS Widgets, Multi-Gateway Payment Rails, Kommo Architecture, Standalone CDP Platform',
+      title: 'Enterprise CRM, Standalone Custom Web App & Scalable CDP',
+      desc: 'Master customer record layer featuring custom embedded CRM UI widgets (1-click checkout, live settlement status from Stripe / Xendit / Mercado Pago). Decoupled heavy sales operations into a standalone custom web application microservice to bypass API rate caps (7 req/sec) and eliminate CRM UI lag.',
+      tech: 'Enterprise CRM API v4, Standalone Custom Web App, Custom JS Widgets, Multi-Gateway Payment Rails, Kommo Architecture, Standalone CDP Platform',
       resilience: 'Rate-limited request queuing (7 req/sec throttle), bidirectional entity synchronization, contact deduplication.'
     },
     'widgets_accounting': {
