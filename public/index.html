@@ -40,7 +40,7 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
   
-  <link rel="stylesheet" href="/style.css?v=3.1">
+  <link rel="stylesheet" href="/style.css?v=3.2">
   <link rel="icon" type="image/jpeg" href="/profile_photo.jpg">
 </head>
 <body class="bg-[#07090e] text-slate-100 min-h-screen relative font-sans antialiased selection:bg-cyan-500 selection:text-slate-950">
@@ -161,19 +161,19 @@
             </div>
             <div class="flex items-center gap-2 text-slate-300 bg-slate-900/70 p-2.5 rounded-lg border border-white/5">
               <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-400 shrink-0"></i>
-              <span><strong class="text-blue-300 font-bold">MAPI</strong> Marketing Campaign & Audience Sync</span>
+              <span><strong class="text-blue-300 font-bold">CAPI & MAPI</strong> AdTech Server-Side & Audience Sync</span>
             </div>
             <div class="flex items-center gap-2 text-slate-300 bg-slate-900/70 p-2.5 rounded-lg border border-white/5">
-              <i data-lucide="check-circle-2" class="w-4 h-4 text-violet-400 shrink-0"></i>
-              <span><strong class="text-violet-300 font-bold">CAPI</strong> Server-Side Conversion Dispatch (Meta & GA4)</span>
-            </div>
-            <div class="flex items-center gap-2 text-slate-300 bg-slate-900/70 p-2.5 rounded-lg border border-white/5">
-              <i data-lucide="phone-call" class="w-4 h-4 text-emerald-400 shrink-0"></i>
-              <span><strong class="text-emerald-300 font-bold">Twilio SDK</strong>: Telephony & WhatsApp Bridge</span>
+              <i data-lucide="phone-call" class="w-4 h-4 text-violet-400 shrink-0"></i>
+              <span><strong class="text-violet-300 font-bold">Twilio SDK</strong>: CRM Telephony & WhatsApp Bridge</span>
             </div>
             <div class="flex items-center gap-2 text-slate-300 bg-slate-900/70 p-2.5 rounded-lg border border-rose-500/30">
               <i data-lucide="trending-up" class="w-4 h-4 text-rose-400 shrink-0"></i>
-              <span><strong class="text-rose-300 font-bold">1,000+ Hypotheses</strong>: Short, Long, Repeat & Installment Funnels</span>
+              <span><strong class="text-rose-300 font-bold">1,000+ Hypotheses</strong>: Short, Long, Repeat & Installments</span>
+            </div>
+            <div class="flex items-center gap-2 text-slate-300 bg-slate-900/70 p-2.5 rounded-lg border border-amber-500/30">
+              <i data-lucide="bar-chart-3" class="w-4 h-4 text-amber-400 shrink-0"></i>
+              <span><strong class="text-amber-300 font-bold">Superset & Looker</strong>: Executive BI Dashboards & Cohorts</span>
             </div>
           </div>
 
@@ -477,10 +477,10 @@
             <div class="p-4 bg-slate-950/70 rounded-xl border border-white/10 space-y-2 hover:border-rose-500/30 transition">
               <div class="text-rose-300 font-bold flex items-center gap-2">
                 <i data-lucide="flask-conical" class="w-4 h-4 text-rose-400"></i>
-                <span>1,000+ Hypotheses Tested</span>
+                <span>1,000+ Hypotheses & BI</span>
               </div>
               <p class="text-slate-400 font-sans text-xs">
-                Tested 1,000+ landing page variations, ad copy angles, dynamic lead form configurations, and pricing models across 90+ countries, feeding verified conversion signals back to Meta CAPI and Google Ads in real time.
+                Tested 1,000+ landing pages, ad copies, dynamic lead forms, and pricing models across 90+ countries. Built executive reporting in <b>Apache Superset</b> and <b>Google Looker</b> tracking blended CAC, ROAS, and cohort retention.
               </p>
             </div>
           </div>
@@ -523,7 +523,7 @@
             <div class="space-y-2 pt-2 border-t border-white/5 text-xs font-mono">
               <div class="text-slate-400"><b>CAPI Architecture:</b> Server-side conversion dispatching via <b class="text-cyan-400 font-bold">n8n</b> (Meta CAPI, TikTok Events API, GA4 Measurement Protocol, FBP/FBC cookie preservation).</div>
               <div class="text-slate-400"><b>MAPI Architecture:</b> Automated Custom Audience synchronization pushing CRM high-LTV cohorts into Meta MAPI & Google Ads API, plus automated lead-ad form retrieval.</div>
-              <div class="text-cyan-400"><b>Result:</b> 99.9% conversion event deduplication, 24/7 automated lookalike refreshes, real-time ROAS dashboards in Superset.</div>
+              <div class="text-cyan-400"><b>Result:</b> 99.9% conversion event deduplication, 24/7 automated lookalike refreshes, real-time ROAS & cohort dashboards in Apache Superset & Google Looker.</div>
             </div>
           </div>
 
@@ -1054,9 +1054,9 @@
               <div class="text-violet-300 font-bold mb-1">Custom Fields Hierarchy</div>
               <p class="text-slate-400">Clean taxonomy preserving UTMs, client IDs, attribution hashes, and deal lifecycles.</p>
             </div>
-            <div class="p-3 bg-slate-900/80 rounded-lg border border-white/5">
-              <div class="text-amber-300 font-bold mb-1">Warehouse Sync</div>
-              <p class="text-slate-400">Bidirectional incremental sync between CRM and PostgreSQL/Vertica.</p>
+            <div class="p-3 bg-slate-900/80 rounded-lg border border-amber-500/20">
+              <div class="text-amber-300 font-bold mb-1">Superset & Looker BI</div>
+              <p class="text-slate-400">DWH sync (PostgreSQL/Vertica) powering executive reports in Apache Superset & Google Looker.</p>
             </div>
           </div>
         </div>
@@ -1748,7 +1748,7 @@
             </span>
           </div>
           <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Own the enterprise technical infrastructure connecting marketing, advertising, CRM, sales, communication, finance, and HR for a major international EdTech company. <b>Deeply passionate about marketing</b> and spent the vast majority of my career collaborating directly with marketing teams: co-tested <b>1,000+ marketing hypotheses, campaigns, and growth projects</b>, architected primary sales funnels (both rapid impulse short funnels and 30-to-90-day consultative long funnels), automated repeat sales and retention loops, and engineered localized installment payment plans (BNPL). Designed enterprise CRM API v4 pipelines, self-hosted <b class="text-cyan-400 font-extrabold">n8n</b> clusters, and the <b class="text-white font-bold">CAPI • MAPI • WAPI</b> automation suite. Built automated <b>Video Sales Machines (Zoom + Calendly + Google Calendar + Slack + WhatsApp + CRM)</b> with a <b>probabilistic overbooking engine</b> keeping rep and coding tutor calendar utilization near 100% across individual trial lessons on our custom corporate learning platform (LMS). Decoupled heavy CRM operations into a standalone custom web application to bypass API rate caps. Integrated <b>Twilio SDK for unified VoIP telephony & WhatsApp messaging inside CRM</b> (click-to-call, inbound screen pops, call recording webhooks, automated WhatsApp follow-ups). Engineered <b>Mattermost primary accounting invoice ingestion bots</b>, multi-region payment routing (Stripe, Xendit, Mercado Pago, DPO Pay), partnered with corporate DPO on GDPR/COPPA privacy architectures, and designed complex enterprise <b>Jira</b> project workflows and bidirectional automations.
+            Own the enterprise technical infrastructure connecting marketing, advertising, CRM, sales, communication, finance, and HR for a major international EdTech company. <b>Deeply passionate about marketing</b> and spent the vast majority of my career collaborating directly with marketing teams: co-tested <b>1,000+ marketing hypotheses, campaigns, and growth projects</b>, architected primary sales funnels (both rapid impulse short funnels and 30-to-90-day consultative long funnels), automated repeat sales and retention loops, and engineered localized installment payment plans (BNPL). Built executive BI reporting and cohort analytics dashboards in <b>Apache Superset</b> and <b>Google Looker</b> (tracking blended ROAS, CAC, conversion velocity, and LTV retention). Designed enterprise CRM API v4 pipelines, self-hosted <b class="text-cyan-400 font-extrabold">n8n</b> clusters, and the <b class="text-white font-bold">CAPI • MAPI • WAPI</b> automation suite. Built automated <b>Video Sales Machines (Zoom + Calendly + Google Calendar + Slack + WhatsApp + CRM)</b> with a <b>probabilistic overbooking engine</b> keeping rep and coding tutor calendar utilization near 100% across individual trial lessons on our custom corporate learning platform (LMS). Decoupled heavy CRM operations into a standalone custom web application to bypass API rate caps. Integrated <b>Twilio SDK for unified VoIP telephony & WhatsApp messaging inside CRM</b> (click-to-call, inbound screen pops, call recording webhooks, automated WhatsApp follow-ups). Engineered <b>Mattermost primary accounting invoice ingestion bots</b>, multi-region payment routing (Stripe, Xendit, Mercado Pago, DPO Pay), partnered with corporate DPO on GDPR/COPPA privacy architectures, and designed complex enterprise <b>Jira</b> project workflows and bidirectional automations.
           </p>
         </div>
 
@@ -1791,10 +1791,10 @@
           <div class="glass-panel p-4 space-y-1 border-rose-500/30">
             <span class="text-xs font-mono text-rose-300 flex items-center gap-1.5">
               <i data-lucide="heart" class="w-3.5 h-3.5 text-rose-400"></i>
-              <span>Growth & Marketing DNA</span>
+              <span>Growth DNA & BI Reporting</span>
             </span>
-            <div class="font-bold text-sm text-white">1,000+ Hypotheses Tested</div>
-            <div class="text-xs text-slate-400">Short/long funnels, repeat sales loops, and installment plans engineered directly with marketing.</div>
+            <div class="font-bold text-sm text-white">1,000+ Hypotheses • Superset • Looker</div>
+            <div class="text-xs text-slate-400">Short/long funnels, repeat sales, installment plans, and executive reporting in Superset & Looker.</div>
           </div>
         </div>
 
@@ -2110,6 +2110,6 @@
     </div>
   </footer>
 
-  <script src="/app.js?v=3.1"></script>
+  <script src="/app.js?v=3.2"></script>
 </body>
 </html>

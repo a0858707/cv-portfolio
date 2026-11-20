@@ -303,9 +303,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const nodeSpecs = {
     'traffic': {
-      title: 'Global Traffic Ingestion, 1,000+ Funnels & CAPI/MAPI Rails',
-      desc: 'Tested across 1,000+ marketing hypotheses and projects in 90+ countries. Powers short impulse funnels (24h webinars, quiz-to-checkout), long consultative sales funnels (30-90 days), automated repeat purchases, and localized installment plans (BNPL) with real-time conversion feedback via Meta CAPI and Google Ads.',
-      tech: 'Full-Lifecycle Funnels (Short/Long/Repeat/Installments), Meta CAPI, Meta MAPI, Google Ads API, TikTok Events API, GA4 Measurement Protocol, UTM Engine',
+      title: 'Global Traffic Ingestion, 1,000+ Funnels & BI Rails',
+      desc: 'Tested across 1,000+ marketing hypotheses and projects in 90+ countries. Powers short impulse funnels (24h webinars, quiz-to-checkout), long consultative sales funnels (30-90 days), automated repeat purchases, and localized installment plans (BNPL) with real-time conversion feedback via Meta CAPI and executive BI dashboards in Apache Superset & Google Looker.',
+      tech: 'Full-Lifecycle Funnels (Short/Long/Repeat/Installments), Apache Superset & Google Looker BI, Meta CAPI, Meta MAPI, Google Ads API, TikTok Events API, GA4 Measurement Protocol, UTM Engine',
       resilience: 'Server-side CAPI event deduplication (event_id), cookie preservation (fbp/fbc), automated lookalike cohort sync via MAPI.'
     },
     'compulse': {
