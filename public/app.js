@@ -328,15 +328,15 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     'crm_cdp': {
       title: 'Enterprise CRM + Custom Widgets & Scalable CDP',
-      desc: 'Master customer record layer featuring custom embedded CRM UI widgets (1-click invoicing, live payment status from ERP/Xero, contract generator). When CRM mailing limits are capped, audience segments and drip sequences scale via dedicated CDP pipelines.',
-      tech: 'Enterprise CRM API v4, Custom JS Widgets, ERP / Xero Bridge, Kommo Architecture, Standalone CDP Platform',
+      desc: 'Master customer record layer featuring custom embedded CRM UI widgets (1-click checkout generation, live settlement status from Stripe / Xendit / Mercado Pago, and contract generator). When CRM mailing limits are capped, audience segments and drip sequences scale via dedicated CDP pipelines.',
+      tech: 'Enterprise CRM API v4, Custom JS Widgets, Multi-Gateway Payment Rails, Kommo Architecture, Standalone CDP Platform',
       resilience: 'Rate-limited request queuing (7 req/sec throttle), bidirectional entity synchronization, contact deduplication.'
     },
     'widgets_accounting': {
-      title: 'Custom CRM UI Widgets & ERP Accounting Bridges (Xero / QuickBooks)',
-      desc: 'Embedded interactive interfaces inside CRM deal cards allowing sales reps to generate invoices, verify bank payment settlements from ERP and Xero, and track document signing without leaving the CRM. All closed transactions automatically trigger accounting ledger entries and tax document creation.',
-      tech: 'CRM JS SDK, REST API v4, ERP & Accounting APIs, Xero API, E-Signature Gateways, Webhook Callbacks',
-      resilience: 'Asynchronous bank reconciliation, signature validation, zero manual data entry delay.'
+      title: 'Global & LatAm Payment Rails (Stripe, Xendit, Mercado Pago / dLocal) & Xero',
+      desc: 'Unified multi-currency payment infrastructure connecting global (Stripe), Southeast Asia (Xendit - QRIS, Virtual Accounts, e-wallets), and Latin America (Mercado Pago / dLocal - PIX, Boleto, SPEI, OXXO) directly to CRM deal pipelines. Embedded widgets allow sales reps to generate localized payment links and observe real-time bank settlement verification, while closed transactions automatically trigger accounting ledger entries in Xero.',
+      tech: 'Stripe API & Webhooks, Xendit API, Mercado Pago SDK, dLocal Gateway, Xero API, Redis Webhook Idempotency',
+      resilience: 'Cryptographic webhook signature verification (HMAC), asynchronous voucher clearance polling, zero duplicate charge guarantees.'
     },
     'ai_monitor': {
       title: 'Autonomous AI Agent Error Interceptor',

@@ -657,18 +657,18 @@
         <div class="glass-panel p-6 border-cyan-500/30 space-y-6">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <div>
-              <span class="text-xs font-mono text-cyan-400 uppercase font-semibold">Embedded Extensions & ERP Connectivity</span>
+              <span class="text-xs font-mono text-cyan-400 uppercase font-semibold">Embedded Extensions & Multi-Gateway Connectivity</span>
               <h4 class="text-lg sm:text-xl font-bold text-white mt-1">
-                Custom CRM UI Widgets & Direct Accounting Integration (Xero / QuickBooks / Stripe Billing)
+                Custom CRM UI Widgets: Stripe, Xendit, Mercado Pago & Accounting (Xero)
               </h4>
             </div>
             <span class="text-xs font-mono px-3 py-1 rounded bg-slate-800 text-slate-300 border border-white/10 w-fit">
-              Frontend JS Widgets + Backend API Sync
+              Frontend JS Widgets + Multi-Gateway Sync
             </span>
           </div>
 
           <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-4xl">
-            Sales reps lose up to 30% of their selling hours switching between CRM tabs, accounting spreadsheets, and billing portals. I build <b>custom interactive iframe/JS widgets directly into CRM deal cards</b> and connect them to enterprise accounting & ERP systems (Xero, QuickBooks, Stripe Billing, E-Invoicing Gateways).
+            Sales reps lose up to 30% of their selling hours switching between CRM tabs, payment dashboards, and billing portals. I build <b>custom interactive iframe/JS widgets directly into CRM deal cards</b> and connect them to international payment rails (Stripe, Xendit, Mercado Pago / dLocal) and enterprise accounting systems (Xero, QuickBooks).
           </p>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-mono">
@@ -677,9 +677,9 @@
               <div class="w-8 h-8 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center border border-cyan-500/20">
                 <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
               </div>
-              <div class="text-sm font-bold text-white">1-Click Invoicing Widget</div>
+              <div class="text-sm font-bold text-white">1-Click Localized Checkout Widget</div>
               <p class="text-slate-400 font-sans text-xs">
-                Embedded directly inside the CRM deal sidebar. Sales managers click "Generate Invoice" to automatically compile pricing, VAT, and customer details, instantly creating an official invoice in Xero, QuickBooks, or custom billing gateway with an automated payment link.
+                Embedded directly inside the CRM deal sidebar. Sales managers click "Generate Payment Link" to automatically generate a localized checkout (Stripe cards/Apple Pay, Xendit Virtual Accounts/QRIS for SEA, or Mercado Pago PIX/OXXO for LatAm) with instant deal stage automation.
               </p>
             </div>
 
@@ -689,7 +689,7 @@
               </div>
               <div class="text-sm font-bold text-white">Live Payment & Settlement Status</div>
               <p class="text-slate-400 font-sans text-xs">
-                Real-time bank settlement verification widget. The moment a wire or card payment clears in the banking/accounting gateway, the widget lights up green in the CRM card and advances the deal to "Paid", eliminating manual accountant confirmations.
+                Real-time multi-gateway settlement verification widget. The moment a transaction clears via Stripe, Xendit, or Mercado Pago / dLocal, the widget lights up green in the CRM card and advances the deal to "Paid", eliminating manual finance confirmations.
               </p>
             </div>
 
@@ -697,9 +697,9 @@
               <div class="w-8 h-8 rounded-lg bg-violet-500/10 text-violet-400 flex items-center justify-center border border-violet-500/20">
                 <i data-lucide="file-spreadsheet" class="w-4 h-4"></i>
               </div>
-              <div class="text-sm font-bold text-white">Automated Acts & Closing Documents</div>
+              <div class="text-sm font-bold text-white">Automated Reconciliation & Invoicing</div>
               <p class="text-slate-400 font-sans text-xs">
-                Synchronized with e-signature and accounting gateways to generate reconciliation acts and monthly completion statements. Signed electronic documents are pulled back via webhooks and attached directly to customer CRM profiles.
+                Synchronized with Xero, QuickBooks, and gateway settlement reports to auto-generate invoices, match multi-currency payouts, and post general ledger entries with zero human data entry.
               </p>
             </div>
 
@@ -716,15 +716,74 @@
             <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-semibold">
               FinOps & Revenue Infrastructure
             </span>
-            <span class="text-xs font-mono text-slate-400">Multi-Gateway Integration</span>
+            <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded border border-emerald-500/20">
+              Stripe • Xendit • Mercado Pago • dLocal
+            </span>
           </div>
 
           <h3 class="text-xl sm:text-2xl font-bold text-white">
             Automated Multi-Currency Billing, Gateway Reconciliation & Churn Recovery
           </h3>
           <p class="text-sm text-slate-300 mt-2 max-w-4xl">
-            In international education and subscription products, failed payments and settlement delays create severe revenue leakage. I designed end-to-end FinOps pipelines connecting payment processors, accounting software (Xero, Stripe, Telr), and CRM deals.
+            In international education and subscription SaaS, payment failures and local gateway quirks (PIX, OXXO, Virtual Accounts) create severe revenue leakage. I designed end-to-end FinOps pipelines connecting global payment processors (<b>Stripe</b>), Southeast Asian rails (<b>Xendit</b>), and Latin American local payment networks (<b>Mercado Pago</b> / <b>dLocal</b>) directly to CRM deals and Xero ledgers.
           </p>
+        </div>
+
+        <!-- Regional Payment Rails Grid (Stripe, Xendit, Mercado Pago / dLocal) -->
+        <div class="glass-panel p-6 border-emerald-500/20 space-y-4">
+          <div class="flex items-center justify-between">
+            <h4 class="text-base font-bold text-white flex items-center gap-2">
+              <i data-lucide="globe" class="w-4 h-4 text-emerald-400"></i>
+              <span>Multi-Region Payment Orchestration (Global, APAC & LatAm)</span>
+            </h4>
+            <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+              100% Webhook Automated
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-mono">
+            <!-- Stripe (Global) -->
+            <div class="p-4 bg-slate-900/80 rounded-xl border border-white/10 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-bold text-cyan-300">Stripe Global</span>
+                <span class="text-[10px] text-slate-400 px-1.5 py-0.5 rounded bg-slate-800">US / EU / Global</span>
+              </div>
+              <p class="text-slate-300 font-sans text-xs">
+                Recurring SaaS subscriptions, Payment Intents, dynamic 3D-Secure 2.0 routing, and webhook-driven dunning sequences for failed charge recoveries.
+              </p>
+              <div class="text-[11px] text-slate-400 pt-1 border-t border-white/5">
+                <span class="text-cyan-400">Rails:</span> Cards, Apple Pay, Google Pay, SEPA
+              </div>
+            </div>
+
+            <!-- Xendit (Southeast Asia / APAC) -->
+            <div class="p-4 bg-slate-900/80 rounded-xl border border-white/10 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-bold text-emerald-300">Xendit APAC</span>
+                <span class="text-[10px] text-slate-400 px-1.5 py-0.5 rounded bg-slate-800">Southeast Asia</span>
+              </div>
+              <p class="text-slate-300 font-sans text-xs">
+                Hyper-local Southeast Asia checkout pipelines. Automated Virtual Account generation, dynamic QRIS codes, and asynchronous webhook handling for cash-over-counter settlement.
+              </p>
+              <div class="text-[11px] text-slate-400 pt-1 border-t border-white/5">
+                <span class="text-emerald-400">Rails:</span> QRIS, OVO, Dana, ShopeePay, Virtual Accounts
+              </div>
+            </div>
+
+            <!-- Mercado Pago / dLocal (Latin America) -->
+            <div class="p-4 bg-slate-900/80 rounded-xl border border-white/10 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-bold text-amber-300">Mercado Pago & dLocal</span>
+                <span class="text-[10px] text-slate-400 px-1.5 py-0.5 rounded bg-slate-800">Latin America</span>
+              </div>
+              <p class="text-slate-300 font-sans text-xs">
+                LatAm regional payment engine handling Brazil (instant PIX & Boleto Bancário), Mexico (SPEI & OXXO vouchers), and Colombia (PSE). Multi-currency conversion into USD/EUR settlements.
+              </p>
+              <div class="text-[11px] text-slate-400 pt-1 border-t border-white/5">
+                <span class="text-amber-400">Rails:</span> PIX (Brazil), OXXO (Mexico), PSE (Colombia)
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -735,7 +794,7 @@
             </div>
             <h4 class="text-base font-bold text-white">Idempotent Webhook Processing</h4>
             <p class="text-xs text-slate-300">
-              Gateway webhooks (Stripe, Telr, local bank APIs) often send duplicated delivery attempts. Built cryptographic signature verification with Redis idempotency keys, ensuring zero double-charging or duplicate deal closures.
+              Gateway webhooks (Stripe, Xendit, Mercado Pago, dLocal) often send duplicated delivery attempts. Built cryptographic signature verification with Redis idempotency keys, ensuring zero double-charging or duplicate deal closures.
             </p>
           </div>
 
@@ -755,7 +814,7 @@
             </div>
             <h4 class="text-base font-bold text-white">Financial Settlement Reconciliation</h4>
             <p class="text-xs text-slate-300">
-              Automated reconciliation engine cross-referencing bank gateway settlement files against CRM deal amounts and Xero general ledger entries. Discrepancies are flagged immediately in an audit dashboard.
+              Automated reconciliation engine cross-referencing bank gateway settlement files (Stripe payouts, Xendit disbursals, Mercado Pago remittances) against CRM deal amounts and Xero general ledger entries.
             </p>
           </div>
 
@@ -942,11 +1001,11 @@
 
           <i data-lucide="arrow-right" class="w-5 h-5 text-slate-600 shrink-0"></i>
 
-          <!-- Node 6: ERP & Accounting Bridge -->
-          <div data-node-id="widgets_accounting" class="arch-node cursor-pointer p-4 rounded-xl bg-slate-900 border border-emerald-500/40 hover:border-emerald-400 hover:shadow-[0_0_20px_rgba(16,185,129,0.25)] transition flex flex-col items-center gap-2 text-center w-44">
-            <i data-lucide="file-spreadsheet" class="w-6 h-6 text-emerald-400"></i>
-            <span class="font-bold text-emerald-300">ERP & Xero Sync</span>
-            <span class="text-[10px] text-slate-400">Auto Settlements & Invoices</span>
+          <!-- Node 6: Global & LatAm Payment Rails -->
+          <div data-node-id="widgets_accounting" class="arch-node cursor-pointer p-4 rounded-xl bg-slate-900 border border-emerald-500/40 hover:border-emerald-400 hover:shadow-[0_0_20px_rgba(16,185,129,0.25)] transition flex flex-col items-center gap-2 text-center w-48">
+            <i data-lucide="credit-card" class="w-6 h-6 text-emerald-400"></i>
+            <span class="font-bold text-emerald-300">Stripe, Xendit & LatAm</span>
+            <span class="text-[10px] text-slate-400">Mercado Pago / dLocal + Xero</span>
           </div>
 
           <i data-lucide="arrow-right" class="w-5 h-5 text-slate-600 shrink-0"></i>
@@ -1329,6 +1388,6 @@
     </a>
   </aside>
 
-  <script src="/app.js?v=2.3"></script>
+  <script src="/app.js?v=2.4"></script>
 </body>
 </html>
