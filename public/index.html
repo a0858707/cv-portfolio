@@ -76,7 +76,7 @@
         <a href="#tab-crm" onclick="document.querySelector('[data-tab=crm]').click()" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/5 transition">CRM & CDP</a>
         <a href="#tab-finance" onclick="document.querySelector('[data-tab=finance]').click()" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/5 transition">FinTech</a>
         <a href="#tab-hr" onclick="document.querySelector('[data-tab=hr]').click()" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/5 transition">HR App</a>
-        <a href="#tab-legal" onclick="document.querySelector('[data-tab=legal]').click()" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/5 transition">Legal Ops</a>
+        <a href="#tab-legal" onclick="document.querySelector('[data-tab=legal]').click()" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/5 transition">Legal & DPO</a>
         <a href="#architecture" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/5 transition">Architecture</a>
         <a href="#compulse" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition">Compulse.cc</a>
         <a href="#about" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-white hover:bg-white/5 transition">Life & Pet Projects</a>
@@ -355,7 +355,7 @@
 
         <button data-tab="legal" class="tab-btn px-4 py-2.5 rounded-xl border border-white/10 bg-slate-900/80 text-sm font-semibold text-slate-400 hover:text-white flex items-center gap-2">
           <i data-lucide="file-check-2" class="w-4 h-4 text-amber-400"></i>
-          <span>Legal & DocOps</span>
+          <span>Legal Ops & DPO</span>
         </button>
 
       </div>
@@ -717,7 +717,7 @@
               FinOps & Revenue Infrastructure
             </span>
             <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded border border-emerald-500/20">
-              Stripe • Xendit • Mercado Pago • dLocal
+              Stripe • Xendit • Mercado Pago • dLocal • DPO Pay
             </span>
           </div>
 
@@ -725,34 +725,34 @@
             Automated Multi-Currency Billing, Gateway Reconciliation & Churn Recovery
           </h3>
           <p class="text-sm text-slate-300 mt-2 max-w-4xl">
-            In international education and subscription SaaS, payment failures and local gateway quirks (PIX, OXXO, Virtual Accounts) create severe revenue leakage. I designed end-to-end FinOps pipelines connecting global payment processors (<b>Stripe</b>), Southeast Asian rails (<b>Xendit</b>), and Latin American local payment networks (<b>Mercado Pago</b> / <b>dLocal</b>) directly to CRM deals and Xero ledgers.
+            In international education and subscription SaaS, payment failures and local gateway quirks (PIX, OXXO, Virtual Accounts) create severe revenue leakage. I designed end-to-end FinOps pipelines connecting global payment processors (<b>Stripe</b>), Southeast Asian rails (<b>Xendit</b>), Latin American networks (<b>Mercado Pago</b> / <b>dLocal</b>), and African / Middle Eastern gateways (<b>DPO Group / DPO Pay</b>) directly to CRM deals and Xero ledgers.
           </p>
         </div>
 
-        <!-- Regional Payment Rails Grid (Stripe, Xendit, Mercado Pago / dLocal) -->
+        <!-- Regional Payment Rails Grid (Stripe, Xendit, Mercado Pago / dLocal, DPO Pay) -->
         <div class="glass-panel p-6 border-emerald-500/20 space-y-4">
           <div class="flex items-center justify-between">
             <h4 class="text-base font-bold text-white flex items-center gap-2">
               <i data-lucide="globe" class="w-4 h-4 text-emerald-400"></i>
-              <span>Multi-Region Payment Orchestration (Global, APAC & LatAm)</span>
+              <span>Multi-Region Payment Orchestration (Global, APAC, LatAm & MEA)</span>
             </h4>
             <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
               100% Webhook Automated
             </span>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-mono">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs font-mono">
             <!-- Stripe (Global) -->
             <div class="p-4 bg-slate-900/80 rounded-xl border border-white/10 space-y-2">
               <div class="flex items-center justify-between">
                 <span class="text-sm font-bold text-cyan-300">Stripe Global</span>
-                <span class="text-[10px] text-slate-400 px-1.5 py-0.5 rounded bg-slate-800">US / EU / Global</span>
+                <span class="text-[10px] text-slate-400 px-1.5 py-0.5 rounded bg-slate-800">US / EU</span>
               </div>
               <p class="text-slate-300 font-sans text-xs">
                 Recurring SaaS subscriptions, Payment Intents, dynamic 3D-Secure 2.0 routing, and webhook-driven dunning sequences for failed charge recoveries.
               </p>
               <div class="text-[11px] text-slate-400 pt-1 border-t border-white/5">
-                <span class="text-cyan-400">Rails:</span> Cards, Apple Pay, Google Pay, SEPA
+                <span class="text-cyan-400">Rails:</span> Cards, Apple Pay, SEPA
               </div>
             </div>
 
@@ -763,24 +763,38 @@
                 <span class="text-[10px] text-slate-400 px-1.5 py-0.5 rounded bg-slate-800">Southeast Asia</span>
               </div>
               <p class="text-slate-300 font-sans text-xs">
-                Hyper-local Southeast Asia checkout pipelines. Automated Virtual Account generation, dynamic QRIS codes, and asynchronous webhook handling for cash-over-counter settlement.
+                Hyper-local Southeast Asia checkout pipelines. Automated Virtual Account generation, dynamic QRIS codes, and asynchronous webhook handling.
               </p>
               <div class="text-[11px] text-slate-400 pt-1 border-t border-white/5">
-                <span class="text-emerald-400">Rails:</span> QRIS, OVO, Dana, ShopeePay, Virtual Accounts
+                <span class="text-emerald-400">Rails:</span> QRIS, OVO, Virtual Accounts
               </div>
             </div>
 
             <!-- Mercado Pago / dLocal (Latin America) -->
             <div class="p-4 bg-slate-900/80 rounded-xl border border-white/10 space-y-2">
               <div class="flex items-center justify-between">
-                <span class="text-sm font-bold text-amber-300">Mercado Pago & dLocal</span>
+                <span class="text-sm font-bold text-amber-300">Mercado Pago / dLocal</span>
                 <span class="text-[10px] text-slate-400 px-1.5 py-0.5 rounded bg-slate-800">Latin America</span>
               </div>
               <p class="text-slate-300 font-sans text-xs">
-                LatAm regional payment engine handling Brazil (instant PIX & Boleto Bancário), Mexico (SPEI & OXXO vouchers), and Colombia (PSE). Multi-currency conversion into USD/EUR settlements.
+                LatAm regional payment engine handling Brazil (instant PIX & Boleto), Mexico (SPEI & OXXO vouchers), and Colombia (PSE) into USD settlements.
               </p>
               <div class="text-[11px] text-slate-400 pt-1 border-t border-white/5">
-                <span class="text-amber-400">Rails:</span> PIX (Brazil), OXXO (Mexico), PSE (Colombia)
+                <span class="text-amber-400">Rails:</span> PIX, OXXO, PSE
+              </div>
+            </div>
+
+            <!-- DPO Pay / DPO Group (Middle East & Africa / MEA) -->
+            <div class="p-4 bg-slate-900/80 rounded-xl border border-white/10 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="text-sm font-bold text-violet-300">DPO Pay (MEA)</span>
+                <span class="text-[10px] text-slate-400 px-1.5 py-0.5 rounded bg-slate-800">Middle East & Africa</span>
+              </div>
+              <p class="text-slate-300 font-sans text-xs">
+                Direct Pay Online (DPO Group) integration for Middle East and African franchises. Multi-currency processing, international cards, and mobile money.
+              </p>
+              <div class="text-[11px] text-slate-400 pt-1 border-t border-white/5">
+                <span class="text-violet-400">Rails:</span> Cards, M-Pesa, Mobile Money
               </div>
             </div>
           </div>
@@ -883,23 +897,83 @@
 
       </div>
 
-      <!-- ─── TAB 5: LEGAL & DOCOPS ───────────────────────────────── -->
+      <!-- ─── TAB 5: LEGAL OPS, DOCOPS & DPO GOVERNANCE ─────────────── -->
       <div id="tab-legal" class="tab-content hidden space-y-8">
         
         <div class="glass-panel p-6 border-amber-500/30">
           <div class="flex items-center justify-between mb-4">
             <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 font-semibold">
-              Legal Tech & Document Workflow
+              Legal Tech, DocOps & Regulatory Privacy
             </span>
-            <span class="text-xs font-mono text-slate-400">Contracts, NDAs & Signatures</span>
+            <span class="text-xs font-mono text-amber-400 bg-amber-500/10 px-2.5 py-0.5 rounded border border-amber-500/20">
+              DPO Partnership • GDPR / COPPA / LGPD
+            </span>
           </div>
 
           <h3 class="text-xl sm:text-2xl font-bold text-white">
-            Dynamic Contract Generation, Digital Signatures & CRM Archiving
+            Dynamic Contract Automation, Digital Signatures & Data Protection Officer (DPO) Collaboration
           </h3>
           <p class="text-sm text-slate-300 mt-2 max-w-4xl">
-            Managing thousands of student enrollment agreements, tutor contracts, and vendor NDAs manually creates massive delays. I automated the entire document lifecycle from CRM trigger to certified digital signature and audit storage.
+            In international education and global SaaS, high-speed growth requires strict legal velocity and regulatory privacy. I worked hand-in-hand with our corporate <b>Data Protection Officer (DPO)</b> to architect automated GDPR/COPPA/LGPD compliance pipelines, while automating the document lifecycle from CRM trigger to certified digital signature and audit storage.
           </p>
+        </div>
+
+        <!-- Dedicated DPO Engineering Card -->
+        <div class="glass-panel p-6 border-amber-500/20 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center border border-amber-500/20 shrink-0">
+                <i data-lucide="shield-alert" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/20">
+                  Data Governance & Regulatory Architecture
+                </span>
+                <h4 class="text-lg font-bold text-white mt-1">
+                  Close Partnership with the Data Protection Officer (DPO)
+                </h4>
+              </div>
+            </div>
+            <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20 w-fit">
+              100% GDPR / COPPA Compliant
+            </span>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Operating across 90+ international markets meant processing data for hundreds of thousands of minors and parents under EU GDPR, US COPPA, and Brazil LGPD. I collaborated closely with our corporate <b>DPO</b> to translate legal privacy mandates into high-integrity automated technical pipelines:
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-mono">
+            <div class="p-3.5 bg-slate-900/80 rounded-xl border border-white/10 space-y-1.5">
+              <div class="text-amber-300 font-bold flex items-center gap-1.5">
+                <i data-lucide="trash-2" class="w-4 h-4 text-amber-400"></i>
+                <span>Automated DSAR & Erasure</span>
+              </div>
+              <p class="text-slate-400 font-sans text-xs">
+                Built automated "Right to be Forgotten" (GDPR Art. 17) pipelines in <b>n8n</b> that purge personal data across CRM, Redis, and analytics within the statutory 30-day window without corrupting financial audit trails.
+              </p>
+            </div>
+
+            <div class="p-3.5 bg-slate-900/80 rounded-xl border border-white/10 space-y-1.5">
+              <div class="text-cyan-300 font-bold flex items-center gap-1.5">
+                <i data-lucide="lock" class="w-4 h-4 text-cyan-400"></i>
+                <span>Consent & PII Sanitization</span>
+              </div>
+              <p class="text-slate-400 font-sans text-xs">
+                Engineered consent-state validation gates. Advertising attribution webhooks (Meta CAPI, GA4) only fire when explicit consent tokens exist, preventing illegal tracking of non-consenting users.
+              </p>
+            </div>
+
+            <div class="p-3.5 bg-slate-900/80 rounded-xl border border-white/10 space-y-1.5">
+              <div class="text-emerald-300 font-bold flex items-center gap-1.5">
+                <i data-lucide="file-check" class="w-4 h-4 text-emerald-400"></i>
+                <span>COPPA & Minor Protection</span>
+              </div>
+              <p class="text-slate-400 font-sans text-xs">
+                Audited student data models with the DPO to enforce verifiable parental consent (VPC), automated age-gating, and strict encryption at rest for all academic records.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -1098,7 +1172,7 @@
             </span>
           </div>
           <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Own the enterprise technical infrastructure connecting marketing, advertising, CRM, sales, communication, finance, and HR for a major international EdTech company. Designed enterprise CRM API v4 pipelines, self-hosted <b class="text-cyan-400 font-extrabold">n8n</b> cluster with custom Redis queues, server-side attribution with Meta CAPI, WABA automation, and AI anomaly detection.
+            Own the enterprise technical infrastructure connecting marketing, advertising, CRM, sales, communication, finance, and HR for a major international EdTech company. Designed enterprise CRM API v4 pipelines, self-hosted <b class="text-cyan-400 font-extrabold">n8n</b> cluster with custom Redis queues, server-side attribution with Meta CAPI, multi-region payment routing (Stripe, Xendit, Mercado Pago, DPO Pay), partnered closely with corporate DPO on global GDPR/COPPA privacy architectures, WABA automation, and autonomous AI anomaly monitoring.
           </p>
         </div>
 
