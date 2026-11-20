@@ -40,7 +40,7 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
   
-  <link rel="stylesheet" href="/style.css?v=3.0">
+  <link rel="stylesheet" href="/style.css?v=3.1">
   <link rel="icon" type="image/jpeg" href="/profile_photo.jpg">
 </head>
 <body class="bg-[#07090e] text-slate-100 min-h-screen relative font-sans antialiased selection:bg-cyan-500 selection:text-slate-950">
@@ -121,17 +121,31 @@
           </h1>
           
           <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-            I engineer mission-critical automation infrastructure powered by <strong class="text-cyan-300 font-bold">n8n</strong>: orchestrating the <b class="text-white font-extrabold">CAPI • MAPI • WAPI</b> ecosystem — high-concurrency WhatsApp (WAPI/WABA) broadcasts, server-side conversion dispatching (Meta CAPI, GA4), programmatic marketing campaign & audience sync (MAPI), and deep bidirectional CRM synchronization. From zero-dropped-lead messaging to breaking CRM limits with modern CDP tools.
+            I engineer mission-critical automation infrastructure powered by <strong class="text-cyan-300 font-bold">n8n</strong> with a <strong class="text-rose-400 font-bold">deep marketing DNA</strong>. I love marketing and have spent the core of my career working shoulder-to-shoulder with growth teams: orchestrating the <b class="text-white font-extrabold">CAPI • MAPI • WAPI</b> ecosystem, building end-to-end sales funnels (short impulse & long consultative), repeat sales loops, and localized installment payment systems — having co-tested <b class="text-white font-bold">over 1,000+ marketing hypotheses & projects</b>.
           </p>
 
-          <!-- Battle-Hardened n8n Skill Callout -->
-          <div class="p-3.5 rounded-xl bg-cyan-950/40 border border-cyan-500/30 flex items-start sm:items-center gap-3 text-xs font-mono shadow-[0_0_20px_rgba(0,242,254,0.1)] shimmer-badge">
-            <div class="w-8 h-8 rounded-lg bg-cyan-400/20 text-cyan-400 flex items-center justify-center shrink-0 border border-cyan-400/30">
-              <i data-lucide="shield-check" class="w-4 h-4"></i>
+          <!-- Dual Identity Callouts: Battle-Hardened n8n & Marketing Passion -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <!-- Callout 1: Battle-Hardened n8n -->
+            <div class="p-3 rounded-xl bg-cyan-950/40 border border-cyan-500/30 flex items-start gap-2.5 text-xs font-mono shadow-[0_0_20px_rgba(0,242,254,0.1)] shimmer-badge">
+              <div class="w-7 h-7 rounded-lg bg-cyan-400/20 text-cyan-400 flex items-center justify-center shrink-0 border border-cyan-400/30 mt-0.5">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+              </div>
+              <div>
+                <span class="text-cyan-300 font-bold block">Battle-Hardened n8n:</span>
+                <span class="text-slate-300">Hardened by solving every error in high load (OOM, loops, 429 locks, schema drifts).</span>
+              </div>
             </div>
-            <div>
-              <span class="text-cyan-300 font-bold block sm:inline">Battle-Hardened <b class="text-white font-extrabold">n8n</b> Architecture:</span>
-              <span class="text-slate-300">Expertise forged by having made, debugged, and resolved every conceivable error in high-load production (infinite loops, memory leaks, payload bottlenecks, async retry traps, 429 lockouts).</span>
+
+            <!-- Callout 2: Marketing Passion & 1000+ Hypotheses -->
+            <div class="p-3 rounded-xl bg-rose-950/40 border border-rose-500/30 flex items-start gap-2.5 text-xs font-mono shadow-[0_0_20px_rgba(244,63,94,0.1)] shimmer-badge">
+              <div class="w-7 h-7 rounded-lg bg-rose-400/20 text-rose-400 flex items-center justify-center shrink-0 border border-rose-400/30 mt-0.5">
+                <i data-lucide="heart" class="w-3.5 h-3.5"></i>
+              </div>
+              <div>
+                <span class="text-rose-300 font-bold block">Passionate About Marketing:</span>
+                <span class="text-slate-300">Tested 1,000+ hypotheses: short/long funnels, repeat sales & installment plans.</span>
+              </div>
             </div>
           </div>
 
@@ -153,9 +167,13 @@
               <i data-lucide="check-circle-2" class="w-4 h-4 text-violet-400 shrink-0"></i>
               <span><strong class="text-violet-300 font-bold">CAPI</strong> Server-Side Conversion Dispatch (Meta & GA4)</span>
             </div>
-            <div class="flex items-center gap-2 text-slate-300 bg-slate-900/70 p-2.5 rounded-lg border border-emerald-500/30 sm:col-span-2">
+            <div class="flex items-center gap-2 text-slate-300 bg-slate-900/70 p-2.5 rounded-lg border border-white/5">
               <i data-lucide="phone-call" class="w-4 h-4 text-emerald-400 shrink-0"></i>
-              <span><strong class="text-emerald-300 font-bold">Twilio SDK + CRM</strong>: Unified WebRTC Telephony & WhatsApp Messaging Hub (Click-to-Call & Screen Pops)</span>
+              <span><strong class="text-emerald-300 font-bold">Twilio SDK</strong>: Telephony & WhatsApp Bridge</span>
+            </div>
+            <div class="flex items-center gap-2 text-slate-300 bg-slate-900/70 p-2.5 rounded-lg border border-rose-500/30">
+              <i data-lucide="trending-up" class="w-4 h-4 text-rose-400 shrink-0"></i>
+              <span><strong class="text-rose-300 font-bold">1,000+ Hypotheses</strong>: Short, Long, Repeat & Installment Funnels</span>
             </div>
           </div>
 
@@ -394,6 +412,78 @@
           <p class="text-sm text-slate-300 mt-2 max-w-4xl">
             Marketing automation at scale fails when infrastructure is built on brittle point-to-point webhooks. At Algorithmics, I built an enterprise-grade automation backbone combining self-hosted <strong class="text-cyan-400 font-bold">n8n</strong> worker clusters, Redis request buffering, the <b class="text-white">CAPI • MAPI • WAPI</b> API trifecta, and continuous AI monitoring.
           </p>
+        </div>
+
+        <!-- ─── SHOWCASE: I LOVE MARKETING & FULL-LIFECYCLE FUNNEL ARCHITECTURE ─── -->
+        <div class="glass-panel p-6 border-rose-500/30 space-y-5 bg-gradient-to-br from-slate-900/95 via-slate-900/80 to-rose-950/20">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center border border-rose-500/20 shrink-0">
+                <i data-lucide="heart" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-rose-500/10 text-rose-300 border border-rose-500/20 font-semibold">
+                  Growth & Revenue Engineering
+                </span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1">
+                  I Love Marketing: 1,000+ Hypotheses Tested Across Full-Lifecycle Funnels
+                </h4>
+              </div>
+            </div>
+            <span class="text-xs font-mono text-rose-300 bg-rose-500/10 px-3 py-1 rounded-full border border-rose-500/20 w-fit">
+              1,000+ Growth Experiments
+            </span>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-4xl">
+            Throughout my 6.5+ years in international EdTech, my daily work was centered on <b>close collaboration with marketing teams</b>. I love marketing because code only truly creates value when it moves the needle on CAC, conversion, and customer LTV. Working as the technical copilot to CMOs, growth hackers, and media buyers, I engineered the automation backbones for <b>over 1,000+ marketing hypotheses, campaigns, and funnels</b>.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-xs font-mono pt-2">
+            <!-- Pillar 1: Primary Sales Funnels (Short & Long) -->
+            <div class="p-4 bg-slate-950/70 rounded-xl border border-white/10 space-y-2 hover:border-cyan-500/30 transition">
+              <div class="text-cyan-300 font-bold flex items-center gap-2">
+                <i data-lucide="trending-up" class="w-4 h-4 text-cyan-400"></i>
+                <span>Short & Long Sales Funnels</span>
+              </div>
+              <p class="text-slate-400 font-sans text-xs">
+                Built rapid-conversion short funnels (24-hour flash webinars, WhatsApp quiz-to-checkout bots) alongside high-ticket 30-to-90-day consultative funnels with multi-touch nurture, trial bookings, and automated sales rep scoring.
+              </p>
+            </div>
+
+            <!-- Pillar 2: Repeat Sales & LTV Expansion -->
+            <div class="p-4 bg-slate-950/70 rounded-xl border border-white/10 space-y-2 hover:border-emerald-500/30 transition">
+              <div class="text-emerald-300 font-bold flex items-center gap-2">
+                <i data-lucide="repeat" class="w-4 h-4 text-emerald-400"></i>
+                <span>Repeat Sales & Retention</span>
+              </div>
+              <p class="text-slate-400 font-sans text-xs">
+                Engineered automated student re-enrollment sequences, next-level course upsells, sibling bundles, and churn prediction alerts. Re-activated inactive leads with targeted WhatsApp drips, boosting customer LTV by over 28%.
+              </p>
+            </div>
+
+            <!-- Pillar 3: Multi-Part Installments & BNPL -->
+            <div class="p-4 bg-slate-950/70 rounded-xl border border-white/10 space-y-2 hover:border-violet-500/30 transition">
+              <div class="text-violet-300 font-bold flex items-center gap-2">
+                <i data-lucide="credit-card" class="w-4 h-4 text-violet-400"></i>
+                <span>Installment Plans & BNPL</span>
+              </div>
+              <p class="text-slate-400 font-sans text-xs">
+                Architected flexible split-payment and localized installment flows (2, 4, 6, 12 months) via Stripe, Xendit, and Mercado Pago. Built automated dunning triggers that recovered 22%+ of overdue milestone payments.
+              </p>
+            </div>
+
+            <!-- Pillar 4: 1,000+ Hypotheses & Rapid Testing -->
+            <div class="p-4 bg-slate-950/70 rounded-xl border border-white/10 space-y-2 hover:border-rose-500/30 transition">
+              <div class="text-rose-300 font-bold flex items-center gap-2">
+                <i data-lucide="flask-conical" class="w-4 h-4 text-rose-400"></i>
+                <span>1,000+ Hypotheses Tested</span>
+              </div>
+              <p class="text-slate-400 font-sans text-xs">
+                Tested 1,000+ landing page variations, ad copy angles, dynamic lead form configurations, and pricing models across 90+ countries, feeding verified conversion signals back to Meta CAPI and Google Ads in real time.
+              </p>
+            </div>
+          </div>
         </div>
 
         <!-- 3 Sub-Tracks in Marketing -->
@@ -1658,7 +1748,7 @@
             </span>
           </div>
           <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Own the enterprise technical infrastructure connecting marketing, advertising, CRM, sales, communication, finance, and HR for a major international EdTech company. Designed enterprise CRM API v4 pipelines, self-hosted <b class="text-cyan-400 font-extrabold">n8n</b> clusters, and the <b class="text-white font-bold">CAPI • MAPI • WAPI</b> automation suite. Built automated <b>Video Sales Machines (Zoom + Calendly + Google Calendar + Slack + WhatsApp + CRM)</b> with a <b>probabilistic overbooking engine</b> keeping rep and coding tutor calendar utilization near 100% across individual trial lessons on our custom corporate learning platform (LMS). Decoupled heavy CRM operations into a standalone custom web application to bypass API rate caps. Integrated <b>Twilio SDK for unified VoIP telephony & WhatsApp messaging inside CRM</b> (click-to-call, inbound screen pops, call recording webhooks, automated WhatsApp follow-ups). Engineered <b>Mattermost primary accounting invoice ingestion bots</b>, multi-region payment routing (Stripe, Xendit, Mercado Pago, DPO Pay), partnered with corporate DPO on GDPR/COPPA privacy architectures, and designed complex enterprise <b>Jira</b> project workflows and bidirectional automations.
+            Own the enterprise technical infrastructure connecting marketing, advertising, CRM, sales, communication, finance, and HR for a major international EdTech company. <b>Deeply passionate about marketing</b> and spent the vast majority of my career collaborating directly with marketing teams: co-tested <b>1,000+ marketing hypotheses, campaigns, and growth projects</b>, architected primary sales funnels (both rapid impulse short funnels and 30-to-90-day consultative long funnels), automated repeat sales and retention loops, and engineered localized installment payment plans (BNPL). Designed enterprise CRM API v4 pipelines, self-hosted <b class="text-cyan-400 font-extrabold">n8n</b> clusters, and the <b class="text-white font-bold">CAPI • MAPI • WAPI</b> automation suite. Built automated <b>Video Sales Machines (Zoom + Calendly + Google Calendar + Slack + WhatsApp + CRM)</b> with a <b>probabilistic overbooking engine</b> keeping rep and coding tutor calendar utilization near 100% across individual trial lessons on our custom corporate learning platform (LMS). Decoupled heavy CRM operations into a standalone custom web application to bypass API rate caps. Integrated <b>Twilio SDK for unified VoIP telephony & WhatsApp messaging inside CRM</b> (click-to-call, inbound screen pops, call recording webhooks, automated WhatsApp follow-ups). Engineered <b>Mattermost primary accounting invoice ingestion bots</b>, multi-region payment routing (Stripe, Xendit, Mercado Pago, DPO Pay), partnered with corporate DPO on GDPR/COPPA privacy architectures, and designed complex enterprise <b>Jira</b> project workflows and bidirectional automations.
           </p>
         </div>
 
@@ -1679,7 +1769,7 @@
         </div>
 
         <!-- Education, Certifications & Core Mastery -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <div class="glass-panel p-4 space-y-1">
             <span class="text-xs font-mono text-cyan-400">Education & Citizenship</span>
             <div class="font-bold text-sm text-white">Tashkent University of Information Technologies</div>
@@ -1697,6 +1787,14 @@
             </span>
             <div class="font-bold text-sm text-white">Battle-Tested n8n Architecture</div>
             <div class="text-xs text-slate-400">Mastery forged by diagnosing & solving every failure mode (OOM, loops, 429 locks, schema drifts).</div>
+          </div>
+          <div class="glass-panel p-4 space-y-1 border-rose-500/30">
+            <span class="text-xs font-mono text-rose-300 flex items-center gap-1.5">
+              <i data-lucide="heart" class="w-3.5 h-3.5 text-rose-400"></i>
+              <span>Growth & Marketing DNA</span>
+            </span>
+            <div class="font-bold text-sm text-white">1,000+ Hypotheses Tested</div>
+            <div class="text-xs text-slate-400">Short/long funnels, repeat sales loops, and installment plans engineered directly with marketing.</div>
           </div>
         </div>
 
@@ -2012,6 +2110,6 @@
     </div>
   </footer>
 
-  <script src="/app.js?v=3.0"></script>
+  <script src="/app.js?v=3.1"></script>
 </body>
 </html>

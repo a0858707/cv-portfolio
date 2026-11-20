@@ -303,9 +303,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const nodeSpecs = {
     'traffic': {
-      title: 'Global Traffic Ingestion & CAPI / MAPI AdTech Rails',
-      desc: 'Captures paid and organic clicks from Meta, Google Ads, TikTok Ads, Telegram channels, and direct campaigns across 90+ countries. Ingests leads through automated MAPI (Marketing API) lead forms and synchronizes conversion feedback via CAPI.',
-      tech: 'Meta CAPI, Meta MAPI, Google Ads API, TikTok Events API, GTM, GA4 Measurement Protocol, UTM/fbclid/gclid parser',
+      title: 'Global Traffic Ingestion, 1,000+ Funnels & CAPI/MAPI Rails',
+      desc: 'Tested across 1,000+ marketing hypotheses and projects in 90+ countries. Powers short impulse funnels (24h webinars, quiz-to-checkout), long consultative sales funnels (30-90 days), automated repeat purchases, and localized installment plans (BNPL) with real-time conversion feedback via Meta CAPI and Google Ads.',
+      tech: 'Full-Lifecycle Funnels (Short/Long/Repeat/Installments), Meta CAPI, Meta MAPI, Google Ads API, TikTok Events API, GA4 Measurement Protocol, UTM Engine',
       resilience: 'Server-side CAPI event deduplication (event_id), cookie preservation (fbp/fbc), automated lookalike cohort sync via MAPI.'
     },
     'compulse': {
