@@ -85,6 +85,23 @@ app.post('/api/simulate-agent', (req, res) => {
       leadsRecovered: 45,
       recoveryStatus: 'PATCH_GENERATED_LEADS_QUEUED',
       latency: '450ms'
+    },
+    'rate_limiter_overflow': {
+      title: 'Custom Rate Limiter Gateway: RabbitMQ Outgrown & Replaced',
+      workflow: 'High-Concurrency Webhook Dispatcher #001',
+      error: 'RabbitMQ Backpressure Bottleneck: Unable to handle asymmetric rate limits (amoCRM 7 req/s vs WABA 40 req/s).',
+      rootCause: 'Standard broker queues suffered head-of-line blocking during a 22,000 lead marketing launch.',
+      aiDiagnosis: 'Asymmetric downstream consumer saturation. RabbitMQ lacked per-destination token bucket precision.',
+      actionTaken: [
+        'Custom Rate Limiter Gateway intercepted webhook stream directly from n8n',
+        'Separated payloads into isolated dynamic sliding-window queues per destination',
+        'Strictly paced amoCRM API v4 to 6.8 req/s while accelerating WhatsApp WABA to 40 req/s',
+        'Successfully dispatched 22,000 webhooks with 0 dropped events and 0 HTTP 429 lockouts'
+      ],
+      leadsAffected: 22000,
+      leadsRecovered: 22000,
+      recoveryStatus: '100%_DISPATCHED_ZERO_DROPS',
+      latency: '180ms'
     }
   };
 
