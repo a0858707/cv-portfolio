@@ -10,38 +10,63 @@ document.addEventListener('DOMContentLoaded', () => {
   const playBtn = document.getElementById('videoPlayBtn');
   const muteBtn = document.getElementById('videoMuteBtn');
   const progressBar = document.getElementById('videoProgress');
+  const progressBarWrapper = document.getElementById('progressBarWrapper');
   const timeDisplay = document.getElementById('videoTime');
   const playIcon = document.getElementById('playIcon');
   const pauseIcon = document.getElementById('pauseIcon');
+  const replayIcon = document.getElementById('replayIcon');
+  const replayOverlay = document.getElementById('videoReplayOverlay');
   const volumeIcon = document.getElementById('volumeIcon');
   const muteIcon = document.getElementById('muteIcon');
 
+  function updateVideoUI(state) {
+    if (state === 'playing') {
+      if (playIcon) playIcon.classList.add('hidden');
+      if (pauseIcon) pauseIcon.classList.remove('hidden');
+      if (replayIcon) replayIcon.classList.add('hidden');
+      if (replayOverlay) replayOverlay.classList.add('hidden');
+    } else if (state === 'paused') {
+      if (playIcon) playIcon.classList.remove('hidden');
+      if (pauseIcon) pauseIcon.classList.add('hidden');
+      if (replayIcon) replayIcon.classList.add('hidden');
+      if (replayOverlay) replayOverlay.classList.add('hidden');
+    } else if (state === 'ended') {
+      if (playIcon) playIcon.classList.add('hidden');
+      if (pauseIcon) pauseIcon.classList.add('hidden');
+      if (replayIcon) replayIcon.classList.remove('hidden');
+      if (replayOverlay) replayOverlay.classList.remove('hidden');
+    }
+  }
+
   if (video && playBtn) {
-    // Attempt muted autoplay on user interaction or load
+    // Attempt muted autoplay on load
     video.muted = true;
-    video.play().catch(() => {
-      // Autoplay with sound prevented by browser policy - stays paused until click
-      if (playIcon && pauseIcon) {
-        playIcon.classList.remove('hidden');
-        pauseIcon.classList.add('hidden');
-      }
+    video.play().then(() => {
+      updateVideoUI('playing');
+    }).catch(() => {
+      // Autoplay prevented by browser - show play button
+      updateVideoUI('paused');
     });
 
-    playBtn.addEventListener('click', () => {
-      if (video.paused) {
+    function togglePlayOrReplay() {
+      // If ended or near the end, replay from start
+      if (video.ended || (video.duration && video.currentTime >= video.duration - 0.2)) {
+        video.currentTime = 0;
         video.play();
-        if (playIcon && pauseIcon) {
-          playIcon.classList.add('hidden');
-          pauseIcon.classList.remove('hidden');
-        }
+        updateVideoUI('playing');
+      } else if (video.paused) {
+        video.play();
+        updateVideoUI('playing');
       } else {
         video.pause();
-        if (playIcon && pauseIcon) {
-          playIcon.classList.remove('hidden');
-          pauseIcon.classList.add('hidden');
-        }
+        updateVideoUI('paused');
       }
-    });
+    }
+
+    playBtn.addEventListener('click', togglePlayOrReplay);
+    if (replayOverlay) {
+      replayOverlay.addEventListener('click', togglePlayOrReplay);
+    }
 
     if (muteBtn) {
       muteBtn.addEventListener('click', () => {
@@ -64,15 +89,44 @@ document.addEventListener('DOMContentLoaded', () => {
         const curSec = Math.floor(video.currentTime);
         const durSec = Math.floor(video.duration);
         if (timeDisplay) {
-          timeDisplay.textContent = `00:0${curSec} / 00:0${durSec}`;
+          timeDisplay.textContent = `00:${curSec < 10 ? '0' : ''}${curSec} / 00:${durSec < 10 ? '0' : ''}${durSec}`;
         }
       }
     });
 
+    // When video ends: STOP (no loop), show replay button & overlay
     video.addEventListener('ended', () => {
-      video.currentTime = 0;
-      video.play();
+      video.pause();
+      if (progressBar) progressBar.style.width = '100%';
+      const durSec = Math.floor(video.duration || 10);
+      if (timeDisplay) {
+        timeDisplay.textContent = `00:${durSec < 10 ? '0' : ''}${durSec} / 00:${durSec < 10 ? '0' : ''}${durSec}`;
+      }
+      updateVideoUI('ended');
+      if (window.lucide) window.lucide.createIcons();
     });
+
+    video.addEventListener('pause', () => {
+      if (!video.ended && (video.duration ? video.currentTime < video.duration - 0.2 : true)) {
+        updateVideoUI('paused');
+      }
+    });
+
+    video.addEventListener('play', () => {
+      updateVideoUI('playing');
+    });
+
+    if (progressBarWrapper) {
+      progressBarWrapper.addEventListener('click', (e) => {
+        if (!video.duration) return;
+        const rect = progressBarWrapper.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const newTime = (clickX / rect.width) * video.duration;
+        video.currentTime = newTime;
+        video.play();
+        updateVideoUI('playing');
+      });
+    }
   }
 
   // ─── 2. Interactive Department Tabs ─────────────────────────────
