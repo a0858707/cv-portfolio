@@ -89,11 +89,11 @@ app.post('/api/simulate-agent', (req, res) => {
       latency: '450ms'
     },
     'rate_limiter_overflow': {
-      title: 'Custom Rate Limiter Gateway: RabbitMQ Outgrown & Replaced',
+      title: 'Custom Rate Limiter Gateway: Queue Pacing & Spillover Mitigation',
       workflow: 'High-Concurrency Webhook Dispatcher #001',
-      error: 'RabbitMQ Backpressure Bottleneck: Unable to handle asymmetric rate limits (CRM 7 req/s vs WABA 40 req/s).',
-      rootCause: 'Standard broker queues suffered head-of-line blocking during a 22,000 lead marketing launch.',
-      aiDiagnosis: 'Asymmetric downstream consumer saturation. RabbitMQ lacked per-destination token bucket precision.',
+      error: 'Asymmetric Downstream Rate Limit Warning: CRM quota threshold (6.8 req/s) reached under 22,000 lead surge.',
+      rootCause: 'Downstream endpoint quota variance between CRM (7 req/s) and WhatsApp (40 req/s).',
+      aiDiagnosis: 'Asymmetric downstream consumer saturation. Dynamic token bucket adjustment required.',
       actionTaken: [
         'Custom Rate Limiter Gateway intercepted webhook stream directly from n8n',
         'Separated payloads into isolated dynamic sliding-window queues per destination',

@@ -315,9 +315,9 @@ document.addEventListener('DOMContentLoaded', () => {
       resilience: 'Automated hourly health probes, synthetic transaction testing, zero ad-budget burn alerts.'
     },
     'queue': {
-      title: 'Custom Rate Limiter & Webhook Gateway (RabbitMQ Replaced)',
-      desc: 'Under massive advertising spikes (20,000+ concurrent leads), standard RabbitMQ message brokers failed to handle asymmetric downstream rate limits (CRM strict 7 req/s vs WAPI/WhatsApp 40 req/s vs Accounting APIs), causing queue backpressure stalls. Alexander built a dedicated Custom Rate Limiter Gateway that receives webhooks from n8n, buffers them in Redis token buckets, prioritizes hot sales leads, and smoothly distributes traffic to downstream services with zero drops.',
-      tech: 'Custom Dispatcher Microservice, Redis Token Bucket & Sorted Sets, Dynamic Jitter Backoff, RabbitMQ Replacement',
+      title: 'Custom Rate Limiter & Webhook Gateway',
+      desc: 'Under massive advertising spikes (20,000+ concurrent leads), generic queues struggled to handle asymmetric downstream rate limits (CRM strict 7 req/s vs WAPI/WhatsApp 40 req/s vs Accounting APIs), causing queue backpressure stalls. Alexander built a dedicated Custom Rate Limiter Gateway that receives webhooks from n8n, buffers them in Redis token buckets, prioritizes hot sales leads, and smoothly distributes traffic to downstream services with zero drops.',
+      tech: 'Custom Dispatcher Microservice, Redis Token Bucket & Sorted Sets, Dynamic Jitter Backoff, High-Concurrency Pacing',
       resilience: 'Isolated multi-tenant destination queues, zero HTTP 429 CRM lockouts, automated dead-letter retry.'
     },
     'n8n': {
@@ -382,4 +382,24 @@ document.addEventListener('DOMContentLoaded', () => {
       modal.classList.remove('flex');
     }
   });
+
+  // ─── Scroll Reveal Animations ─────────────────────────────────
+  const revealElements = document.querySelectorAll('.reveal-init');
+  if ('IntersectionObserver' in window && revealElements.length > 0) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.08,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealElements.forEach(el => observer.observe(el));
+  } else {
+    revealElements.forEach(el => el.classList.add('reveal-visible'));
+  }
 });

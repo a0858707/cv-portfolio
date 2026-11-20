@@ -37,43 +37,67 @@ code, pre, .font-mono {
   background-size: 28px 28px;
 }
 
+@keyframes orb-drift-1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(45px, -35px) scale(1.1);
+  }
+}
+
+@keyframes orb-drift-2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-40px, 30px) scale(0.95);
+  }
+}
+
 .glow-orb-cyan {
   position: absolute;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(0, 242, 254, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+  background: radial-gradient(circle, rgba(0, 242, 254, 0.16) 0%, rgba(0, 0, 0, 0) 70%);
   filter: blur(60px);
   pointer-events: none;
   z-index: 0;
+  animation: orb-drift-1 14s ease-in-out infinite;
 }
 
 .glow-orb-violet {
   position: absolute;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.14) 0%, rgba(0, 0, 0, 0) 70%);
   filter: blur(60px);
   pointer-events: none;
   z-index: 0;
+  animation: orb-drift-2 16s ease-in-out infinite;
 }
 
-/* Glassmorphism Cards */
+/* Glassmorphism Cards with smooth spring hover */
 .glass-panel {
   background: var(--bg-card);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-subtle);
   border-radius: 16px;
-  transition: all 0.25s ease;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease,
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-panel:hover {
-  border-color: rgba(255, 255, 255, 0.16);
+  transform: translateY(-3px);
+  border-color: rgba(0, 242, 254, 0.3);
+  box-shadow: 0 16px 36px -12px rgba(0, 242, 254, 0.14), 0 0 0 1px rgba(0, 242, 254, 0.12);
 }
 
 .glass-panel-glow:hover {
   border-color: var(--border-highlight);
-  box-shadow: 0 0 25px rgba(0, 242, 254, 0.12);
+  box-shadow: 0 0 35px rgba(0, 242, 254, 0.22);
 }
 
 /* Gradient Texts */
@@ -220,4 +244,116 @@ code, pre, .font-mono {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #334155;
+}
+
+/* ─── ADVANCED ANIMATION SUITE ────────────────────────────────── */
+
+/* Smooth Scroll Reveal */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Stagger delay classes */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+
+/* Gentle Floating */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-slow 4s ease-in-out infinite 2s;
+}
+
+/* Shimmer Sweep Effect */
+@keyframes shimmer-sweep {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-badge {
+  background: linear-gradient(90deg, rgba(0,242,254,0.06) 0%, rgba(0,242,254,0.28) 50%, rgba(0,242,254,0.06) 100%);
+  background-size: 200% 100%;
+  animation: shimmer-sweep 4s linear infinite;
+}
+
+/* Breathing Glow for CTA / Accent Cards */
+@keyframes breathing-glow-cyan {
+  0%, 100% {
+    box-shadow: 0 0 18px rgba(0, 242, 254, 0.25), inset 0 0 12px rgba(0, 242, 254, 0.08);
+  }
+  50% {
+    box-shadow: 0 0 38px rgba(0, 242, 254, 0.5), inset 0 0 20px rgba(0, 242, 254, 0.2);
+  }
+}
+
+.glow-breathing {
+  animation: breathing-glow-cyan 3.2s ease-in-out infinite;
+}
+
+/* Tab Content Entrance Animation */
+.tab-content {
+  animation: tabFadeIn 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes tabFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Cyber Pulse on Flow Connectors */
+@keyframes connector-pulse {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+    color: #00f2fe;
+  }
+}
+
+.connector-arrow {
+  animation: connector-pulse 2.2s ease-in-out infinite;
+}
+
+/* Architecture Node Hover Physics */
+.arch-node {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s ease,
+              border-color 0.25s ease;
+}
+
+.arch-node:hover {
+  transform: scale(1.04) translateY(-3px);
 }
