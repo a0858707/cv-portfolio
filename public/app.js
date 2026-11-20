@@ -327,10 +327,10 @@ document.addEventListener('DOMContentLoaded', () => {
       resilience: 'Strict idempotency keys, sub-workflow error isolation, dead-letter queues (DLQ), stream chunking to eliminate worker OOM crashes.'
     },
     'crm_cdp': {
-      title: 'Enterprise CRM, Standalone Custom Web App & Scalable CDP',
-      desc: 'Master customer record layer featuring custom embedded CRM UI widgets (1-click checkout, live settlement status from Stripe / Xendit / Mercado Pago). Decoupled heavy sales operations into a standalone custom web application microservice to bypass API rate caps (7 req/sec) and eliminate CRM UI lag.',
-      tech: 'Enterprise CRM API v4, Standalone Custom Web App, Custom JS Widgets, Multi-Gateway Payment Rails, Kommo Architecture, Standalone CDP Platform',
-      resilience: 'Rate-limited request queuing (7 req/sec throttle), bidirectional entity synchronization, contact deduplication.'
+      title: 'Enterprise CRM, Twilio Telephony/WhatsApp Bridge & Standalone Web App',
+      desc: 'Master customer record layer featuring unified Twilio Voice SDK VoIP softphones and Twilio WhatsApp messaging integrated into CRM cards (click-to-call, inbound screen pops, call recording & transcript webhooks). Decoupled heavy sales operations into a standalone custom web application microservice to bypass API rate caps (7 req/sec) and eliminate CRM UI lag.',
+      tech: 'Enterprise CRM API v4, Twilio Voice JavaScript SDK, Twilio WhatsApp API, WebRTC Softphone, Standalone Custom Web App, Custom JS Widgets, Kommo Architecture, Standalone CDP Platform',
+      resilience: 'Rate-limited request queuing (7 req/sec throttle), bidirectional entity synchronization, contact deduplication, WebRTC fallback routes.'
     },
     'widgets_accounting': {
       title: 'Global & LatAm Payment Rails (Stripe, Xendit, Mercado Pago / dLocal) & Xero',

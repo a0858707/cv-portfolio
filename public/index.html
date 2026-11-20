@@ -40,7 +40,7 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
   
-  <link rel="stylesheet" href="/style.css?v=2.8">
+  <link rel="stylesheet" href="/style.css?v=3.0">
   <link rel="icon" type="image/jpeg" href="/profile_photo.jpg">
 </head>
 <body class="bg-[#07090e] text-slate-100 min-h-screen relative font-sans antialiased selection:bg-cyan-500 selection:text-slate-950">
@@ -152,6 +152,10 @@
             <div class="flex items-center gap-2 text-slate-300 bg-slate-900/70 p-2.5 rounded-lg border border-white/5">
               <i data-lucide="check-circle-2" class="w-4 h-4 text-violet-400 shrink-0"></i>
               <span><strong class="text-violet-300 font-bold">CAPI</strong> Server-Side Conversion Dispatch (Meta & GA4)</span>
+            </div>
+            <div class="flex items-center gap-2 text-slate-300 bg-slate-900/70 p-2.5 rounded-lg border border-emerald-500/30 sm:col-span-2">
+              <i data-lucide="phone-call" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span><strong class="text-emerald-300 font-bold">Twilio SDK + CRM</strong>: Unified WebRTC Telephony & WhatsApp Messaging Hub (Click-to-Call & Screen Pops)</span>
             </div>
           </div>
 
@@ -864,6 +868,78 @@
               </div>
               <p class="text-slate-400 font-sans text-xs">
                 Scaled the overbooking engine into individual trial programming lessons. Connected Algorithmics' custom proprietary learning platform (LMS) with n8n event webhooks and automated parent notifications, dynamically filling cancelled slots and saving hundreds of idle tutor hours.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── PROJECT: UNIFIED TWILIO SDK INTEGRATION (TELEPHONY + WHATSAPP CRM BRIDGE) ─── -->
+        <div class="glass-panel p-6 border-emerald-500/30 space-y-5 bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-emerald-950/20">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center border border-emerald-500/20 shrink-0">
+                <i data-lucide="phone-call" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 font-semibold">
+                  Unified Communications Architecture
+                </span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1">
+                  Twilio SDK CRM Integration: Hybrid VoIP Telephony & WhatsApp Messaging Engine
+                </h4>
+              </div>
+            </div>
+            <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20 w-fit">
+              Zero Context-Switching
+            </span>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-4xl">
+            Sales velocity collapses when reps must juggle external softphones, separate chat windows, and manual CRM logging. I engineered a unified omnichannel communication layer inside the CRM using the <b>Twilio Voice SDK (WebRTC)</b> and <b>Twilio WhatsApp API</b>, bringing real-time voice calling and instant messaging into a synchronized, single-pane rep workspace.
+          </p>
+
+          <!-- The Stack Strip -->
+          <div class="flex flex-wrap items-center gap-2 text-xs font-mono pt-1">
+            <span class="text-slate-400 font-bold">Integrated Stack:</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-emerald-500/30 text-emerald-300">Twilio Voice JavaScript SDK</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-emerald-500/30 text-emerald-300">Twilio WhatsApp API</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-cyan-500/30 text-cyan-300">WebRTC Softphone</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-white/10 text-white">CRM API v4</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-cyan-500/30 text-cyan-300">n8n Event Broker</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-white/10 text-white">Redis Webhooks</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-mono pt-2">
+            <!-- Pillar 1: WebRTC Browser Telephony & Screen Pops -->
+            <div class="p-4 bg-slate-950/70 rounded-xl border border-white/10 space-y-2">
+              <div class="text-cyan-300 font-bold flex items-center gap-2">
+                <i data-lucide="phone" class="w-4 h-4 text-cyan-400"></i>
+                <span>Browser VoIP & Screen Pops</span>
+              </div>
+              <p class="text-slate-400 font-sans text-xs">
+                Built an embedded WebRTC softphone into CRM deal cards with 1-click calling (click-to-call) and localized caller ID. Inbound calls trigger instant sub-200ms screen pops showing the customer's full deal history, trial attendance, and notes before the rep answers.
+              </p>
+            </div>
+
+            <!-- Pillar 2: Voice-to-WhatsApp Seamless Handoff -->
+            <div class="p-4 bg-slate-950/70 rounded-xl border border-emerald-500/30 space-y-2">
+              <div class="text-emerald-300 font-bold flex items-center gap-2">
+                <i data-lucide="message-square" class="w-4 h-4 text-emerald-400"></i>
+                <span>Voice-to-WhatsApp Handoff</span>
+              </div>
+              <p class="text-slate-400 font-sans text-xs">
+                Synchronized voice and messaging threads in the same CRM timeline. If an outbound call is missed or hits voicemail, an automated n8n webhook instantly dispatches a personalized WhatsApp template with a 1-click calendar rescheduling link.
+              </p>
+            </div>
+
+            <!-- Pillar 3: Automated Call Logging & Transcripts -->
+            <div class="p-4 bg-slate-950/70 rounded-xl border border-blue-500/30 space-y-2">
+              <div class="text-blue-300 font-bold flex items-center gap-2">
+                <i data-lucide="file-audio" class="w-4 h-4 text-blue-400"></i>
+                <span>Lifecycle Logging & Speech AI</span>
+              </div>
+              <p class="text-slate-400 font-sans text-xs">
+                Every call event (duration, disposition, recordings) streams asynchronously via Twilio webhooks into CRM deal notes. Integrated automated speech-to-text transcriptions and AI summary extraction, eliminating manual post-call notes for sales reps.
               </p>
             </div>
           </div>
@@ -1582,7 +1658,7 @@
             </span>
           </div>
           <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Own the enterprise technical infrastructure connecting marketing, advertising, CRM, sales, communication, finance, and HR for a major international EdTech company. Designed enterprise CRM API v4 pipelines, self-hosted <b class="text-cyan-400 font-extrabold">n8n</b> clusters, and the <b class="text-white font-bold">CAPI • MAPI • WAPI</b> automation suite. Built automated <b>Video Sales Machines (Zoom + Calendly + Google Calendar + Slack + WhatsApp + CRM)</b> with a <b>probabilistic overbooking engine</b> keeping rep and coding tutor calendar utilization near 100% across individual trial lessons on our custom corporate learning platform (LMS). Decoupled heavy CRM operations into a standalone custom web application to bypass API rate caps. Engineered <b>Mattermost primary accounting invoice ingestion bots</b>, multi-region payment routing (Stripe, Xendit, Mercado Pago, DPO Pay), partnered with corporate DPO on GDPR/COPPA privacy architectures, and designed complex enterprise <b>Jira</b> project workflows and bidirectional automations.
+            Own the enterprise technical infrastructure connecting marketing, advertising, CRM, sales, communication, finance, and HR for a major international EdTech company. Designed enterprise CRM API v4 pipelines, self-hosted <b class="text-cyan-400 font-extrabold">n8n</b> clusters, and the <b class="text-white font-bold">CAPI • MAPI • WAPI</b> automation suite. Built automated <b>Video Sales Machines (Zoom + Calendly + Google Calendar + Slack + WhatsApp + CRM)</b> with a <b>probabilistic overbooking engine</b> keeping rep and coding tutor calendar utilization near 100% across individual trial lessons on our custom corporate learning platform (LMS). Decoupled heavy CRM operations into a standalone custom web application to bypass API rate caps. Integrated <b>Twilio SDK for unified VoIP telephony & WhatsApp messaging inside CRM</b> (click-to-call, inbound screen pops, call recording webhooks, automated WhatsApp follow-ups). Engineered <b>Mattermost primary accounting invoice ingestion bots</b>, multi-region payment routing (Stripe, Xendit, Mercado Pago, DPO Pay), partnered with corporate DPO on GDPR/COPPA privacy architectures, and designed complex enterprise <b>Jira</b> project workflows and bidirectional automations.
           </p>
         </div>
 
@@ -1936,6 +2012,6 @@
     </div>
   </footer>
 
-  <script src="/app.js?v=2.9"></script>
+  <script src="/app.js?v=3.0"></script>
 </body>
 </html>
