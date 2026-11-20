@@ -40,7 +40,7 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
   
-  <link rel="stylesheet" href="/style.css?v=3.3">
+  <link rel="stylesheet" href="/style.css?v=3.4">
   <link rel="icon" type="image/jpeg" href="/profile_photo.jpg">
 </head>
 <body class="bg-[#07090e] text-slate-100 min-h-screen relative font-sans antialiased selection:bg-cyan-500 selection:text-slate-950">
@@ -653,7 +653,7 @@
                 <span>1. Memory & OOM Crashes</span>
               </div>
               <p class="text-slate-400 font-sans text-xs">
-                <b>The Mistake:</b> Passing 50,000 unchunked lead payloads into single loops, causing Node.js V8 heap limit (<code class="text-rose-300">1.4GB</code>) exhaustion and container crashes.
+                <b>The Mistake:</b> Passing 50,000 unchunked lead payloads into single loops, causing Node.js V8 heap limit (<code class="text-rose-300">1.4GB</code>) exhaustion and worker process crashes.
               </p>
               <div class="p-2 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 font-sans text-xs">
                 <b>Hardened Defense:</b> Stream chunking (500-item slices), Redis cursor pagination, and offloading heavy binaries to S3.
@@ -851,7 +851,7 @@
               </div>
               <div class="p-3 bg-slate-900/60 rounded-lg border border-white/5">
                 <div class="text-emerald-400 font-bold mb-1">Zero Per-Seat Cost</div>
-                <div class="text-slate-400">Runs on self-hosted Docker nodes, zero expensive SaaS subscription bloat.</div>
+                <div class="text-slate-400">Runs on self-hosted high-load nodes, zero expensive SaaS subscription bloat.</div>
               </div>
               <div class="p-3 bg-slate-900/60 rounded-lg border border-white/5">
                 <div class="text-violet-400 font-bold mb-1">Bidirectional Sync</div>
@@ -1637,7 +1637,7 @@
           <div data-node-id="n8n" class="arch-node cursor-pointer p-4 rounded-xl bg-gradient-to-b from-cyan-950 to-slate-900 border-2 border-cyan-400 hover:shadow-[0_0_25px_rgba(0,242,254,0.4)] transition flex flex-col items-center gap-2 text-center w-48 scale-105">
             <i data-lucide="workflow" class="w-7 h-7 text-cyan-300"></i>
             <span class="font-bold text-white text-sm">Self-Hosted <b class="text-cyan-300 font-extrabold">n8n</b></span>
-            <span class="text-[10px] text-cyan-300">Docker Cluster (100+ Workflows)</span>
+            <span class="text-[10px] text-cyan-300">Production Cluster (100+ Workflows)</span>
           </div>
 
           <i data-lucide="arrow-right" class="w-5 h-5 text-cyan-400/70 shrink-0 connector-arrow"></i>
@@ -2111,6 +2111,6 @@
     </div>
   </footer>
 
-  <script src="/app.js?v=3.3"></script>
+  <script src="/app.js?v=3.4"></script>
 </body>
 </html>

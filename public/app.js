@@ -323,7 +323,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'n8n': {
       title: 'Self-Hosted n8n Production Cluster (CAPI • MAPI • WAPI)',
       desc: 'Expert workflow orchestration forged by having made, debugged, and resolved every conceivable failure mode in high-load production. Powers the CAPI/MAPI/WAPI suite, automated Video Sales Machines (Zoom + Calendly + Google Calendar + Slack + WAPI + CRM) with probabilistic overbooking, custom LMS programming tutor scheduling, Mattermost primary invoice ingestion bots, and Jira enterprise automations.',
-      tech: 'n8n 1.x & 2.x, CAPI • MAPI • WAPI, Zoom & Calendly APIs, Jira & Mattermost Bots, Docker Swarm / Compose, TypeScript, Redis Workers',
+      tech: 'n8n 1.x & 2.x, CAPI • MAPI • WAPI, Zoom & Calendly APIs, Jira & Mattermost Bots, High-Availability Cluster Architecture, TypeScript, Redis Workers',
       resilience: 'Strict idempotency keys, sub-workflow error isolation, dead-letter queues (DLQ), stream chunking to eliminate worker OOM crashes.'
     },
     'crm_cdp': {
